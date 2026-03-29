@@ -61,4 +61,6 @@ MongoDB Atlas powers our app by storing:
 
 ## Discosure of AI use
 
-- AI was used for brainstorming the initial project idea
+- brainstorming the initial project idea
+- file structure set up
+- debugging / error messages
