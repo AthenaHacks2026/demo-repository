@@ -4,7 +4,7 @@
 }
 
 .received-btn {
-  background-color: #e9b6d8;
+  background-color: var(--pink);
   border: 1.5px solid #000;
   border-radius: 18px;
   padding: 9px 16px;
@@ -34,7 +34,7 @@
 }
 
 .deny-btn {
-  background-color: #e9b6d8;
+  background-color: var(--pink);
   border: 1.5px solid #000;
   border-radius: 18px;
   padding: 9px 16px;

@@ -6,7 +6,7 @@ import "../styles/SearchSkills.css";
 import Inbox_Navigation from "../Components/Inbox_Navigation";
 import Card_AcceptedRequest from "../Components2/Card_AcceptedRequest";
 
-function Inbox_Received() {
+function Inbox_Accepted() {
   const users = [1, 2, 3, 4];
 
   const skillTags = [
@@ -43,4 +43,4 @@ function Inbox_Received() {
   );
 }
 
-export default Inbox_Received;
+export default Inbox_Accepted;

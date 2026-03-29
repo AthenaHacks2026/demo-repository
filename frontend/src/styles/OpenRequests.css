@@ -16,14 +16,14 @@ body,
 
 body {
   font-family: 'Comfortaa', sans-serif;
-  background: #f4eddc;
+  background: var(--pale-yellow);
   color: #222;
 }
 
 .open-requests-page {
   width: 100%;
   min-height: 100vh;
-  background: #f4eddc;
+  background: var(--pale-yellow);
   margin: 0;
   padding: 0;
   font-family: 'Comfortaa', sans-serif;
@@ -32,7 +32,7 @@ body {
 .open-requests-shell {
   width: 100%;
   min-height: 100vh;
-  background: #f4eddc;
+  background: var(--pale-yellow);
   overflow: hidden;
 }
 
@@ -42,11 +42,11 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 22px 26px;
-  background: #a9c4df;
+  background: var(--sky-blue);
 }
 
 .logo-box {
-  background: #efe5d3;
+  background: var(--pale-yellow);
   border: 1.5px solid #000;
   border-radius: 16px;
   padding: 8px 16px;
@@ -113,7 +113,7 @@ body {
   width: 100%;
   max-width: 320px;
   min-height: 310px;
-  background: #f7f7f7;
+  background: var(--white);
   border: 1.5px solid #666;
   border-radius: 18px;
   padding: 18px 20px;
@@ -190,15 +190,15 @@ body {
 }
 
 .tag-baking {
-  background: #90a8f5;
+  background: var(--blue);
 }
 
 .tag-crochet {
-  background: #efb4da;
+  background: var(--pink);
 }
 
 .tag-drawing {
-  background: #bddcff;
+  background: var(--sky-blue);
 }
 
 .requesting-text,
@@ -215,7 +215,7 @@ body {
   padding: 10px 28px;
   border-radius: 999px;
   border: 1.5px solid #000;
-  background: #b9e58f;
+  background: var(--green);
   font-size: 16px;
   cursor: pointer;
   color: #222;

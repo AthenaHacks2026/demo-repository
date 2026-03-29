@@ -16,14 +16,14 @@ body,
 
 body {
   font-family: 'Comfortaa', sans-serif;
-  background: #f4eddc;
+  background: var(--pale-yellow);
   color: #222;
 }
 
 .approved-page {
   width: 100%;
   min-height: 100vh;
-  background: #f4eddc;
+  background: var(--pale-yellow);
   margin: 0;
   padding: 0;
 }
@@ -31,7 +31,7 @@ body {
 .approved-shell {
   width: 100%;
   min-height: 100vh;
-  background: #f4eddc;
+  background: var(--pale-yellow);
   overflow: hidden;
 }
 
@@ -40,11 +40,11 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 22px 26px;
-  background: #a9c4df;
+  background: var(--sky-blue);
 }
 
 .logo-box {
-  background: #efe5d3;
+  background: var(--pale-yellow);
   border: 1.5px solid #000;
   border-radius: 16px;
   padding: 8px 16px;
@@ -95,7 +95,7 @@ body {
 .connect-card {
   width: 100%;
   max-width: 360px;
-  background: #FFFFFF;
+  background: var(--white);
   border: 1.5px solid #666;
   border-radius: 18px;
   padding: 22px 18px 18px;
@@ -155,7 +155,7 @@ body {
   min-height: 42px;
   border: 1.3px solid #666;
   border-radius: 7px;
-  background: #FFFFFF;
+  background: var(--white);
   padding: 11px 12px;
   font-size: 14px;
   color: #222;
@@ -167,7 +167,7 @@ body {
   padding: 10px 24px;
   border-radius: 999px;
   border: 1.5px solid #000;
-  background: #CCF7A6;
+  background: var(--green);
   font-size: 15px;
   color: #222;
   cursor: pointer;

@@ -8,7 +8,7 @@
 .create-page {
   width: 100%;
   min-height: 100vh;
-  background: #f4eddc;
+  background: var(--pale-yellow);
   margin: 0;
   padding: 0;
   font-family: 'Comfortaa', sans-serif;
@@ -17,7 +17,7 @@
 .create-shell {
   width: 100%;
   min-height: 100vh;
-  background: #f4eddc;
+  background: var(--pale-yellow);
   overflow: hidden;
 }
 
@@ -33,7 +33,7 @@
   padding: 10px 18px;
   border-radius: 999px;
   border: 1.5px solid #000;
-  background: #FFCBF4;
+  background: var(--pink);
   text-decoration: none;
   color: #222;
   font-size: 16px;
@@ -43,7 +43,7 @@
   width: 100%;
   max-width: 430px;
   margin: 20px auto 0;
-  background: #f3f3f3;
+  background: var(--white);
   border: 1.5px solid #666;
   border-radius: 18px;
   padding: 24px 20px 18px;
@@ -83,15 +83,15 @@
 }
 
 .tag-baking {
-  background: #90a8f5;
+  background: var(--blue);
 }
 
 .tag-crochet {
-  background: #FFCBF4;
+  background: var(--pink);
 }
 
 .tag-drawing {
-  background: #bddcff;
+  background: var(--sky-blue);
 }
 
 .request-textarea {
@@ -104,7 +104,7 @@
   font-family: 'Comfortaa', sans-serif;
   font-size: 14px;
   outline: none;
-  background: #fff;
+  background: var(--white);
 }
 
 .offer-input {
@@ -116,7 +116,7 @@
   font-family: 'Comfortaa', sans-serif;
   font-size: 14px;
   outline: none;
-  background: #fff;
+  background: var(--white);
 }
 
 .post-btn {
@@ -125,7 +125,7 @@
   padding: 12px 22px;
   border-radius: 999px;
   border: 1.5px solid #000;
-  background: #b9e58f;
+  background: var(--green);
   font-size: 16px;
   cursor: pointer;
   color: #222;

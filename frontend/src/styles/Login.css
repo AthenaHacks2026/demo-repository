@@ -42,7 +42,7 @@ align-items: center;
 gap: 10px;
 flex: 1 0 0;
 align-self: stretch;
-background: var(--pale-yellow, #FFF9E6);
+background: var(--pale-yellow, var(--pale-yellow));
 }
 
 .title {
@@ -68,7 +68,7 @@ background: var(--pale-yellow, #FFF9E6);
 }
 
 .skill-pill {
-  background: #f7f7f7;
+  background: var(--white);
   border: 2px solid #222;
   border-radius: 18px;
   padding: 16px 26px;
@@ -136,7 +136,7 @@ background: #FFF;
   display: block;
   width: 180px;
   margin: 18px auto 0;
-  background-color: #FFCBF4;
+  background-color: var(--pink);
   border: 1.5px solid #222;
   border-radius: 999px;
   padding: 12px 20px;

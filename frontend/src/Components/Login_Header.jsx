@@ -6,12 +6,12 @@ import profilePic from "../assets/temp_img.png";
 function Login_Header() {
   return (
     <header className="navbar">
-        <div className="logo-box">Logo Here</div>
-        
-        <nav className="nav-menu">
-            <Link to="/inbox-received">Inbox</Link>
-            <Link to="/search">Search Skills</Link>
-            <Link to="/open-requests">Open Requests</Link>
+      <div className="logo-box">Logo Here</div>
+
+      <nav className="nav-menu">
+        <Link to="/inbox-received">Inbox</Link>
+        <Link to="/search">Search Skills</Link>
+        <Link to="/open-requests">Open Requests</Link>
       </nav>
 
       {/* FIXED: use class instead of width/height */}
