@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import LoggedInNavbar from "../Components2/LoggedInNavbar";
+import Login_Header from "../Components/Login_Header";
 import UserCard from "../Components2/UserCard";
 import profilePic from "../assets/image.png";
 import "../styles/SearchSkills.css";
@@ -16,7 +16,7 @@ function SearchSkills() {
   return (
     <div className="search-page">
       <div className="search-shell">
-        <LoggedInNavbar active="search" />
+        <Login_Header active="search" />
 
         <div className="search-header">
           <h1>Skills near You</h1>

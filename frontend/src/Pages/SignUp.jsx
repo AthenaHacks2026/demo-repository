@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import "../styles/SignUp.css";
-import Navbar from "../Components2/Navbar";
+import SignedOut_Header from "../Components/SignedOut_Header";
 
 function SignUp() {
   const skills = [
@@ -19,7 +19,7 @@ function SignUp() {
   return (
     <div className="signup-page">
       <div className="signup-shell">
-        <Navbar />
+        <SignedOut_Header />
 
         <div className="signup-container">
           <div className="left-panel">

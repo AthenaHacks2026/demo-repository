@@ -1,4 +1,4 @@
-import LoggedInNavbar from "../Components2/LoggedInNavbar";
+import Login_Header from "../Components/Login_Header";
 import ConnectCard from "../Components2/ConnectCard";
 import profilePic from "../assets/image.png";
 import "../styles/Approved.css";
@@ -7,7 +7,7 @@ function Approved() {
   return (
     <div className="approved-page">
       <div className="approved-shell">
-        <LoggedInNavbar active="requests" />
+        <Login_Header active="requests" />
 
         <div className="approved-content">
           <h1 className="approved-title">Accepted!</h1>

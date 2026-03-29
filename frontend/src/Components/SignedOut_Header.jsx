@@ -1,4 +1,4 @@
-/*import "../styles/Home.css";
+import "../styles/Home.css";
 import "../styles/Header.css";
 import { Link } from "react-router-dom";
 import star1 from "../assets/star1.png";
@@ -14,11 +14,11 @@ function SignedOut_Header() {
       <nav className="nav-menu">
         <Link to="/">Home</Link>
         <Link to="/">About</Link>
-        <Link to="/services">Skills</Link>
-        <Link to="/profile">Sign Up</Link>
+        <Link to="/search">Skills</Link>
+        <Link to="/signup">Sign Up</Link>
         <button className="login-btn">Login</button>
       </nav>
     </header>
   );
 }
-export default SignedOut_Header;*/
+export default SignedOut_Header;

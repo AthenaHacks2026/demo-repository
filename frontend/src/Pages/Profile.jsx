@@ -1,10 +1,10 @@
 import React from "react";
-import Header from "../Components/Login_Header";
+import Login_Header from "../Components/Login_Header";
 
 function Profile() {
   return(
     <>
-    <Header />
+    <Login_Header />
     <h1>Profile Page</h1>
     </>
     

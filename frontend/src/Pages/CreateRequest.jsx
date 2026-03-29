@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import LoggedInNavbar from "../Components2/LoggedInNavbar";
+import Login_Header from "../Components/Login_Header";
 import "../styles/CreateRequest.css";
 
 function CreateRequest() {
@@ -12,7 +12,7 @@ function CreateRequest() {
   return (
     <div className="create-page">
       <div className="create-shell">
-        <LoggedInNavbar />
+        <Login_Header />
 
         <div className="create-content">
           <Link to="/search" className="back-btn">

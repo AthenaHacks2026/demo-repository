@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import Navbar from "../Components2/Navbar";
+import SignedOut_Header from "../Components/SignedOut_Header";
 import InputField from "../Components2/InputField";
 import "../styles/SkillsStep.css";
 
@@ -7,7 +7,7 @@ function SkillsStep() {
   return (
     <div className="skills-page">
       <div className="skills-shell">
-        <Navbar />
+        <SignedOut_Header />
 
         <h1 className="skills-title">
           What skills can you offer?

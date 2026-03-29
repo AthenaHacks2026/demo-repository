@@ -1,4 +1,4 @@
-import LoggedInNavbar from "../Components2/LoggedInNavbar";
+import Login_Header from "../Components/Login_Header";
 import OpenRequestCard from "../Components2/OpenRequestCard";
 import profilePic from "../assets/image.png";
 import "../styles/OpenRequests.css";
@@ -15,7 +15,7 @@ function OpenRequests() {
   return (
     <div className="open-requests-page">
       <div className="open-requests-shell">
-        <LoggedInNavbar active="requests" />
+        <Login_Header active="requests" />
 
         <div className="open-requests-header">
           <h1>Open requests.</h1>
