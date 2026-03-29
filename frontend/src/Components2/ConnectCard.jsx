@@ -1,4 +1,8 @@
+import { useNavigate } from "react-router-dom";
+
 function ConnectCard({ profilePic, name, subtitle, contact }) {
+  const navigate = useNavigate();
+
   return (
     <div className="connect-card">
       <h2>Connect!</h2>
@@ -17,7 +21,12 @@ function ConnectCard({ profilePic, name, subtitle, contact }) {
         <div className="contact-box">{contact}</div>
       </div>
 
-      <button className="close-btn">Close Page</button>
+      <button
+        className="close-btn"
+        onClick={() => navigate("/inbox-accepted")}
+      >
+        Close Page
+      </button>
     </div>
   );
 }
