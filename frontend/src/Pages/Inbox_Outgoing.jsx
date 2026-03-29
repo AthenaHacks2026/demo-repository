@@ -4,7 +4,7 @@ import UserCard from "../Components2/UserCard";
 import profilePic from "../assets/randy.png";
 import "../styles/SearchSkills.css";
 import Inbox_Navigation from "../Components/Inbox_Navigation";
-import Card_AcceptedRequest from "../Components2/Card_AcceptedRequest";
+import Card_DeniedRequest from "../Components2/Card_DeniedRequest";
 
 function Inbox_Outgoing() {
   const users = [1, 2, 3, 4];
@@ -27,7 +27,7 @@ function Inbox_Outgoing() {
 
         <div className="cards-grid">
           {users.map((user) => (
-            <Card_AcceptedRequest
+            <Card_DeniedRequest
               key={user}
               profilePic={profilePic}
               name="Randy"
