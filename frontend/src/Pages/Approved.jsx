@@ -6,20 +6,18 @@ import "../styles/Approved.css";
 function Approved() {
   return (
     <div className="approved-page">
-      <div className="approved-shell">
-        <Login_Header active="requests" />
+      <Login_Header />
 
-        <div className="approved-content">
-          <h1 className="approved-title">Accepted!</h1>
+      <main className="approved-main">
+        <h1 className="approved-title">Accepted!</h1>
 
-          <ConnectCard
-            profilePic={profilePic}
-            name="Hanna"
-            subtitle="NO REQUEST FROM MINIKUS!!!!"
-            contact="hannalody22@gmail.com"
-          />
-        </div>
-      </div>
+        <ConnectCard
+          profilePic={profilePic}
+          name="Hanna"
+          subtitle="NO REQUEST FROM MINIKUS!!!!"
+          contact="hannalody22@gmail.com"
+        />
+      </main>
     </div>
   );
 }

@@ -5,7 +5,6 @@ import "../styles/CreateRequest.css";
 
 function CreateRequest() {
   const navigate = useNavigate();
-
   const [requesting, setRequesting] = useState("");
   const [offer, setOffer] = useState("");
 
@@ -18,9 +17,8 @@ function CreateRequest() {
   const handlePost = () => {
     const newRequest = {
       id: Date.now(),
-      profilePic: "/src/assets/image.png",
       name: "Kenia",
-      description: "I learned how to crochet when i was 18 and i can draw ur cat :D",
+      description: "I learned how to crochet when I was 18 and I can draw your cat :D",
       skills: mySkills,
       requesting: requesting.trim(),
       offer: offer.trim(),
@@ -39,54 +37,54 @@ function CreateRequest() {
 
   return (
     <div className="create-page">
-      <div className="create-shell">
-        <Login_Header />
+      <Login_Header />
 
-        <div className="create-content">
+      <main className="create-main">
+        <div className="create-top-row">
           <Link to="/search" className="back-btn">
             ← Go back
           </Link>
-
-          <div className="request-card">
-            <h1>Create Request</h1>
-
-            <div className="form-section">
-              <p className="section-label">My Skills</p>
-              <div className="tags-row">
-                {mySkills.map((skill, index) => (
-                  <span key={index} className={`tag ${skill.className}`}>
-                    {skill.label}
-                  </span>
-                ))}
-              </div>
-            </div>
-
-            <div className="form-section">
-              <p className="section-label">Requesting</p>
-              <textarea
-                className="request-textarea"
-                placeholder="What do you need?"
-                value={requesting}
-                onChange={(e) => setRequesting(e.target.value)}
-              />
-            </div>
-
-            <div className="form-section">
-              <p className="section-label">Offer</p>
-              <input
-                className="offer-input"
-                placeholder="What are you offering?"
-                value={offer}
-                onChange={(e) => setOffer(e.target.value)}
-              />
-            </div>
-
-            <button className="post-btn" onClick={handlePost}>
-              Post Request
-            </button>
-          </div>
         </div>
-      </div>
+
+        <div className="request-card">
+          <h1>Create Request</h1>
+
+          <div className="form-section">
+            <p className="section-label">My Skills</p>
+            <div className="tags-row">
+              {mySkills.map((skill, index) => (
+                <span key={index} className={`tag ${skill.className}`}>
+                  {skill.label}
+                </span>
+              ))}
+            </div>
+          </div>
+
+          <div className="form-section">
+            <p className="section-label">Requesting</p>
+            <textarea
+              className="request-textarea"
+              placeholder="What do you need?"
+              value={requesting}
+              onChange={(e) => setRequesting(e.target.value)}
+            />
+          </div>
+
+          <div className="form-section">
+            <p className="section-label">Offer</p>
+            <input
+              className="offer-input"
+              placeholder="What are you offering?"
+              value={offer}
+              onChange={(e) => setOffer(e.target.value)}
+            />
+          </div>
+
+          <button className="post-btn" onClick={handlePost}>
+            Post Request
+          </button>
+        </div>
+      </main>
     </div>
   );
 }

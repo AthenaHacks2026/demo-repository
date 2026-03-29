@@ -1,68 +1,51 @@
-import { useEffect, useState } from "react";
-import Login_Header from "../Components/Login_Header";
-import OpenRequestCard from "../Components2/OpenRequestCard";
-import profilePic from "../assets/image.png";
-import "../styles/OpenRequests.css";
+import { Link } from "react-router-dom";
 
-function OpenRequests() {
-  const defaultRequests = [
-    {
-      id: 1,
-      profilePic,
-      name: "Kenia",
-      description: "I learned how to crochet when i was 18 and i can draw ur cat :D",
-      skills: [
-        { label: "Baking", className: "tag-baking" },
-        { label: "Crochet", className: "tag-crochet" },
-        { label: "Drawing", className: "tag-drawing" },
-      ],
-      requesting: "I NEED SOMEONE WHO CAN TEACH ME TO JUGGLE PLEASEEEEE",
-      offer: "I CAN DO ANYTHING MY SKILLS SAY PLEASE",
-    },
-  ];
-
-  const [requests, setRequests] = useState([]);
-
-  useEffect(() => {
-    const savedRequests = JSON.parse(localStorage.getItem("openRequests"));
-
-    if (savedRequests && savedRequests.length > 0) {
-      const formattedRequests = savedRequests.map((request) => ({
-        ...request,
-        profilePic,
-      }));
-      setRequests(formattedRequests);
-    } else {
-      setRequests(defaultRequests);
-    }
-  }, []);
-
+function OpenRequestCard({
+  profilePic,
+  name,
+  description,
+  skills = [],
+  requesting,
+  offer,
+}) {
   return (
-    <div className="open-requests-page">
-      <div className="open-requests-shell">
-        <Login_Header active="requests" />
+    <div className="open-request-card">
+      <div className="user-header">
+        <img src={profilePic} alt="Profile" className="profile-img" />
 
-        <div className="open-requests-header">
-          <h1>Open requests.</h1>
-          <p>View who in your neighborhood needs help.</p>
-        </div>
-
-        <div className="open-requests-grid">
-          {requests.map((request) => (
-            <OpenRequestCard
-              key={request.id}
-              profilePic={request.profilePic}
-              name={request.name}
-              description={request.description}
-              skills={request.skills}
-              requesting={request.requesting}
-              offer={request.offer}
-            />
-          ))}
+        <div className="user-text">
+          <h3 className="user-name">{name}</h3>
+          <p className="user-description">{description}</p>
         </div>
       </div>
+
+      <div className="skills-block">
+        <p className="label">Skills</p>
+        <div className="tags-row">
+          {Array.isArray(skills) &&
+            skills.map((skill, i) => (
+              <span key={i} className={`tag ${skill.className || ""}`}>
+                {skill.label}
+              </span>
+            ))}
+        </div>
+      </div>
+
+      <div className="requesting-block">
+        <p className="label">Requesting</p>
+        <p className="requesting-text">{requesting}</p>
+      </div>
+
+      <div className="offer-block">
+        <p className="label">Offer</p>
+        <p className="offer-text">{offer}</p>
+      </div>
+
+      <Link to="/approved" className="accept-btn">
+        Accept
+      </Link>
     </div>
   );
 }
 
-export default OpenRequests;
+export default OpenRequestCard;

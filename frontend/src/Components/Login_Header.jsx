@@ -1,20 +1,40 @@
-import "../styles/Home.css";
+import { Link, useLocation } from "react-router-dom";
 import "../styles/Header.css";
-import { Link } from "react-router-dom";
 import profilePic from "../assets/temp_img.png";
 
 function Login_Header() {
+  const location = useLocation();
+
   return (
     <header className="navbar">
-      <div className="logo-box">Logo Here</div>
+      <Link to="/" className="logo-box">
+        Logo Here
+      </Link>
 
       <nav className="nav-menu">
-        <Link to="/inbox-received">Inbox</Link>
-        <Link to="/search">Search Skills</Link>
-        <Link to="/open-requests">Open Requests</Link>
+        <Link
+          to="/inbox-received"
+          className={location.pathname === "/inbox-received" ? "active-link" : ""}
+        >
+          Inbox
+        </Link>
+
+        <Link
+          to="/search"
+          className={location.pathname === "/search" ? "active-link" : ""}
+        >
+          Search Skills
+        </Link>
+
+        <Link
+          to="/open-requests"
+          className={location.pathname === "/open-requests" ? "active-link" : ""}
+        >
+          Open Requests
+        </Link>
       </nav>
 
-      <Link to="/profile">
+      <Link to="/profile" className="profile-link">
         <img src={profilePic} alt="Profile" className="nav-user-img" />
       </Link>
     </header>
