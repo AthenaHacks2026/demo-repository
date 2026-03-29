@@ -298,7 +298,7 @@ body {
   padding: 12px 16px;
   border-radius: 64px;
   border: 1px solid #000;
-  background: #ffcbf4;
+  background: #FFCBF4;
   font-family: 'Comfortaa', sans-serif;
   font-size: 16px;
   cursor: pointer;
@@ -407,7 +407,7 @@ body {
 }
 
 .tag-crochet {
-  background: #ffcbf4;
+  background: #FFCBF4;
 }
 
 .tag-drawing {
@@ -426,7 +426,7 @@ body {
   padding: 14px 36px;
   border-radius: 999px;
   border: 2px solid #000;
-  background: #f6c1e4;
+  background: #FFCBF4;
   font-family: 'Comfortaa', sans-serif;
   font-size: 16px;
   cursor: pointer;

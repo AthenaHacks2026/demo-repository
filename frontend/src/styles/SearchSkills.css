@@ -1,0 +1,210 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+.search-page {
+  width: 100%;
+  min-height: 100vh;
+  background: #f4eddc;  /* match your design */
+  margin: 0;
+}
+
+.search-shell {
+  width: 100%;
+  max-width: 1200px;
+  min-height: 860px;
+  margin: 0 auto;
+  background: #f4eddc;
+  overflow: hidden;
+}
+
+.logged-navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 24px;
+  background: #a9c4df;
+}
+
+.logo-box {
+  background: #efe5d3;
+  border: 1.5px solid #000;
+  border-radius: 16px;
+  padding: 8px 16px;
+  font-size: 14px;
+  color: #222;
+}
+
+.logged-nav-center {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+.logged-nav-center a {
+  text-decoration: none;
+  color: #222;
+  font-size: 14px;
+}
+
+.active-link {
+  text-decoration: underline;
+}
+
+.nav-profile-img {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1.5px solid #000;
+}
+
+.search-header {
+  text-align: center;
+  padding: 60px 20px 30px;
+}
+
+.search-header h1 {
+  font-family: 'Dela Gothic One', sans-serif;
+  font-size: 64px;
+  margin-bottom: 12px;
+  color: #000;
+}
+
+.search-header p {
+  font-size: 18px;
+  color: #555;
+}
+
+.small-text {
+  margin-top: 24px;
+  margin-bottom: 12px;
+  font-size: 16px;
+  color: #222;
+}
+
+.create-btn {
+  display: inline-block;
+  padding: 10px 18px;
+  border-radius: 999px;
+  border: 1.5px solid #000;
+  background: #FFCBF4;
+  text-decoration: none;
+  color: #222;
+  font-size: 16px;
+}
+
+.cards-grid {
+  margin: 30px auto 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+  width: 100%;
+  max-width: 1050px;
+  padding-bottom: 40px;
+}
+
+.user-card {
+  width: 100%;
+  max-width: 390px;
+  min-height: 320px;
+  background: #f7f7f7;
+  border: 1.5px solid #666;
+  border-radius: 18px;
+  padding: 20px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  justify-self: center;
+}
+
+.user-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+  width: 100%;
+}
+
+.profile-img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 1.5px solid #000;
+  object-fit: cover;
+}
+
+.user-text {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex: 1;
+}
+
+.user-name {
+  font-family: 'Dela Gothic One', sans-serif;
+  font-size: 20px;
+  margin: 0;
+}
+
+.user-description {
+  font-size: 14px;
+  line-height: 1.4;
+  color: #555;
+}
+
+.skills-block,
+.looking-block {
+  width: 100%;
+  text-align: left;
+}
+
+.label {
+  font-family: 'Dela Gothic One', sans-serif;
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+.tags-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.tag {
+  padding: 6px 14px;
+  border-radius: 999px;
+  border: 1px solid #000;
+  font-size: 13px;
+  color: #222;
+}
+
+.tag-baking {
+  background: #90a8f5;
+}
+
+.tag-crochet {
+  background: #FFCBF4;
+}
+
+.tag-drawing {
+  background: #bddcff;
+}
+
+.looking-text {
+  font-size: 14px;
+  color: #444;
+}
+
+.request-btn {
+  margin-top: auto;
+  align-self: center;
+  padding: 12px 28px;
+  border-radius: 999px;
+  border: 1.5px solid #000;
+  background: #FFCBF4;
+  font-size: 16px;
+  cursor: pointer;
+}
