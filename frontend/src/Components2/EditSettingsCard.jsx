@@ -9,8 +9,7 @@ function EditSettingsCard() {
       <h3>Preferences</h3>
 
       <InputField placeholder="Notifications" />
-      <InputField placeholder="Password" />
-      <InputField placeholder="Location" />
+      <InputField placeholder="Dark Mode" />
     </div>
   );
 }
