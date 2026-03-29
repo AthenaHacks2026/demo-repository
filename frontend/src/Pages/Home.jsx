@@ -93,20 +93,24 @@ function Home() {
         <div className="cards-grid">
           {[1, 2, 3, 4, 5, 6].map((card) => (
             <div className="user-card" key={card}>
-              <img src={profilePic} alt="Profile" className="profile-img" />
+              <div className="user-header">
+                <img src={profilePic} alt="Profile" className="profile-img" />
 
-              <h3 className="user-name">Kenia</h3>
-
-              <p className="user-description">
-                I learned how to crochet when I was 18 and can draw or cut :D
-              </p>
+                <div className="user-text">
+                  <h3 className="user-name">Kenia</h3>
+                  <p className="user-description">
+                    I learned how to crochet when I was 18 and can draw or cut
+                    :D
+                  </p>
+                </div>
+              </div>
 
               <div className="skills-block">
                 <p className="label">Skills</p>
                 <div className="tags-row">
-                  <span className="tag">Baking</span>
-                  <span className="tag">Crochet</span>
-                  <span className="tag">Drawing</span>
+                  <span className="tag tag-baking">Baking</span>
+                  <span className="tag tag-crochet">Crochet</span>
+                  <span className="tag tag-drawing">Drawing</span>
                 </div>
               </div>
 

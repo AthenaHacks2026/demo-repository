@@ -18,10 +18,10 @@ body {
 }
 
 .top-section {
-  width: 95%;
-  margin: 20px auto 0 auto;
-  background-color: #cfe4fb;
-  border: 3px solid #2a84da;
+  width: 100%;
+  margin: 0px auto 0 auto;
+  background-color: #C0E0FE;
+  border: 3px solid #90A8F5;
 }
 
 .navbar {
@@ -74,7 +74,7 @@ body {
 .hero-image {
   width: 48%;
   height: 320px;
-  background-color: #9eabff;
+  background-color:;
 }
 
 .hero-text {
@@ -125,9 +125,9 @@ body {
 }
 
 .about-section {
-  width: 95%;
+  width: 100%;
   margin: 0 auto;
-  background-color: #f7f0df;
+  background-color: #FFF9E6;
   padding: 40px 20px 90px;
   text-align: center;
 }
@@ -203,9 +203,9 @@ body {
 }
 
 .services-section {
-  width: 95%;
+  width: 100%;
   margin: 0 auto 30px;
-  background-color: #f7f0df;
+  background-color: #FFF9E6;
   text-align: center;
   padding: 10px 20px 80px;
 }
@@ -224,11 +224,18 @@ body {
   padding: 18px 32px;
   border-radius: 64px;
   border: 1px solid #000;
-  background: #efefef;
+  background: #ffffff;
   font-family: 'Comfortaa', sans-serif;
   font-size: 16px;
   font-weight: 500;
   outline: none;
+}
+
+.zip-input::placeholder {
+  color: #777;
+  font-family: 'Comfortaa', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
 }
 
 .zip-helper {
@@ -240,9 +247,9 @@ body {
 
 .login-small {
   margin-top: 16px;
-  padding: 10px 30px;
+  padding: 12px 16px;
   border-radius: 64px;
-  border: 1px solid #000;
+  border: 1px solid #000000;
   background: #ffcbf4;
   font-family: 'Comfortaa', sans-serif;
   font-size: 16px;
@@ -264,15 +271,22 @@ body {
   width: 100%;
   max-width: 390px;
   min-height: 320px;
-  background: #f3f3f3;
+  background: #ffffff;
   border: 2px solid #6f6f6f;
   border-radius: 18px;
   padding: 20px 24px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 14px;
+  gap: 18px;
   justify-self: center;
+}
+
+.user-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+  width: 100%;
 }
 
 .profile-img {
@@ -282,6 +296,15 @@ body {
   border: 2px solid #000;
   object-fit: cover;
   display: block;
+  flex-shrink: 0;
+}
+
+.user-text {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex: 1;
+  text-align: left;
 }
 
 .user-name {
@@ -290,6 +313,7 @@ body {
   font-weight: 400;
   line-height: 1.1;
   color: #000;
+  margin: 0;
 }
 
 .user-description {
@@ -297,8 +321,8 @@ body {
   font-size: 14px;
   line-height: 1.5;
   color: #444;
-  max-width: 280px;
   text-align: left;
+  margin: 0;
 }
 
 .skills-block,
@@ -324,11 +348,25 @@ body {
 .tag {
   padding: 6px 16px;
   border-radius: 999px;
-  border: 1px solid #6ea3e6;
-  background: #d8ebff;
   font-family: 'Comfortaa', sans-serif;
   font-size: 14px;
   color: #000;
+  border: 1px solid #000;
+}
+
+.tag-baking {
+  background: #90A8F5;
+  border: 1px solid #000;
+}
+
+.tag-crochet {
+  background: #FFCBF4;
+  border: 1px solid #000;
+}
+
+.tag-drawing {
+  background: #C0E0FE;
+  border: 1px solid #000;
 }
 
 .looking-text {
@@ -342,7 +380,7 @@ body {
   align-self: center;
   padding: 14px 36px;
   border-radius: 999px;
-  border: 2px solid #9a6a86;
+  border: 2px solid #000000;
   background: #f6c1e4;
   font-family: 'Comfortaa', sans-serif;
   font-size: 16px;
@@ -394,6 +432,15 @@ body {
 
   .user-card {
     max-width: 100%;
+  }
+
+  .user-header {
+    gap: 14px;
+  }
+
+  .profile-img {
+    width: 70px;
+    height: 70px;
   }
 
   .zip-input {
