@@ -1,4 +1,5 @@
 import "../styles/Home.css";
+import { Link } from "react-router-dom";
 import star1 from "../assets/star1.png";
 import star2 from "../assets/star2.png";
 import star3 from "../assets/star3.png";
@@ -11,9 +12,9 @@ function Home() {
           <div className="logo-box">Logo Here</div>
 
           <nav className="nav-menu">
-            <a href="#home">Home</a>
-            <a href="#services">Services</a>
-            <a href="#signup">Sign Up</a>
+            <Link to="/">Home</Link>
+            <Link to="/services">Services</Link>
+            <Link to="/profile">Sign Up</Link>
             <button className="login-btn">Login</button>
           </nav>
         </header>
@@ -27,7 +28,9 @@ function Home() {
             <p>Search and swap skills!</p>
 
             <div className="hero-buttons">
-              <button className="search-btn">Search Services</button>
+              <Link to="/services" className="search-btn">
+                Search Services
+              </Link>
               <button className="offer-btn">Offer Services</button>
             </div>
           </div>
@@ -40,7 +43,7 @@ function Home() {
         <div className="cards-container">
           <div className="info-card mission-card">
             <div className="star">
-              <img src={star1} alt="star1" />
+              <img src={star1} alt="Mission icon" />
             </div>
             <h3>Mission</h3>
             <p>
@@ -51,7 +54,7 @@ function Home() {
 
           <div className="info-card goal-card">
             <div className="star">
-              <img src={star2} alt="star2" />
+              <img src={star2} alt="Goal icon" />
             </div>
             <h3>Goal</h3>
             <p>
@@ -62,7 +65,7 @@ function Home() {
 
           <div className="info-card vision-card">
             <div className="star">
-              <img src={star3} alt="star3" />
+              <img src={star3} alt="Vision icon" />
             </div>
             <h3>Vision</h3>
             <p>
