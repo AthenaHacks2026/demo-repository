@@ -1,0 +1,222 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Comfortaa', sans-serif;
+  background: #f4eddc;
+  color: #222;
+}
+
+.open-requests-page {
+  width: 100%;
+  min-height: 100vh;
+  background: #f4eddc;
+  margin: 0;
+  padding: 0;
+  font-family: 'Comfortaa', sans-serif;
+}
+
+.open-requests-shell {
+  width: 100%;
+  min-height: 100vh;
+  background: #f4eddc;
+  overflow: hidden;
+}
+
+/* navbar */
+.logged-navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 22px 26px;
+  background: #a9c4df;
+}
+
+.logo-box {
+  background: #efe5d3;
+  border: 1.5px solid #000;
+  border-radius: 16px;
+  padding: 8px 16px;
+  font-size: 14px;
+  color: #222;
+}
+
+.logged-nav-center {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+.logged-nav-center a {
+  text-decoration: none;
+  color: #222;
+  font-size: 14px;
+}
+
+.active-link {
+  text-decoration: underline;
+}
+
+.nav-profile-img {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1.5px solid #000;
+}
+
+/* page header */
+.open-requests-header {
+  text-align: center;
+  padding: 56px 20px 28px;
+}
+
+.open-requests-header h1 {
+  margin: 0 0 10px;
+  font-family: 'Dela Gothic One', sans-serif;
+  font-size: 64px;
+  line-height: 1;
+  color: #000;
+}
+
+.open-requests-header p {
+  margin: 0;
+  font-size: 18px;
+  color: #555;
+}
+
+/* cards */
+.open-requests-grid {
+  width: 100%;
+  max-width: 1080px;
+  margin: 22px auto 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+  padding: 0 20px 40px;
+}
+
+.open-request-card {
+  width: 100%;
+  max-width: 320px;
+  min-height: 310px;
+  background: #f7f7f7;
+  border: 1.5px solid #666;
+  border-radius: 18px;
+  padding: 18px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  justify-self: center;
+}
+
+.user-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  width: 100%;
+}
+
+.profile-img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 1.5px solid #000;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.user-text {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  flex: 1;
+  text-align: left;
+}
+
+.user-name {
+  margin: 0;
+  font-family: 'Dela Gothic One', sans-serif;
+  font-size: 18px;
+  color: #000;
+}
+
+.user-description {
+  margin: 0;
+  font-size: 12px;
+  line-height: 1.35;
+  color: #555;
+}
+
+.skills-block,
+.requesting-block,
+.offer-block {
+  width: 100%;
+  text-align: left;
+}
+
+.label {
+  margin: 0 0 6px;
+  font-family: 'Dela Gothic One', sans-serif;
+  font-size: 14px;
+  color: #000;
+}
+
+.tags-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.tag {
+  padding: 5px 12px;
+  border-radius: 999px;
+  border: 1px solid #000;
+  font-size: 12px;
+  color: #222;
+}
+
+.tag-baking {
+  background: #90a8f5;
+}
+
+.tag-crochet {
+  background: #efb4da;
+}
+
+.tag-drawing {
+  background: #bddcff;
+}
+
+.requesting-text,
+.offer-text {
+  margin: 0;
+  font-size: 12px;
+  line-height: 1.3;
+  color: #333;
+}
+
+.accept-btn {
+  margin-top: auto;
+  align-self: center;
+  padding: 10px 28px;
+  border-radius: 999px;
+  border: 1.5px solid #000;
+  background: #b9e58f;
+  font-size: 16px;
+  cursor: pointer;
+  color: #222;
+}
