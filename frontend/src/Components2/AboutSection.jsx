@@ -12,10 +12,7 @@ function AboutSection() {
         <InfoCard
           title="Mission"
           textLines={[
-            "✦ Dedicated to making",
-            "skills accessible for your",
-            "community for mutual",
-            "benefit",
+            "✦ Dedicated to making skills accessible to your for mutual benefit."
           ]}
           extraClass="mission-card"
           starImage={star3}
@@ -25,10 +22,7 @@ function AboutSection() {
         <InfoCard
           title="Goal"
           textLines={[
-            "✦ Dedicated to making",
-            "skills accessible for your",
-            "community for mutual",
-            "benefit",
+            "✦ Save money by trading something what you already know!"
           ]}
           extraClass="goal-card"
           starImage={star2}
@@ -37,7 +31,7 @@ function AboutSection() {
 
         <InfoCard
           title="Vision"
-          textLines={["✦ Cute!", "✦ Blah Blah"]}
+          textLines={["✦ Potentially make friends", "✦ Build and Learn new skills"]}
           extraClass="vision-card"
           starImage={star1}
           altText="Vision icon"
