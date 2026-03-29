@@ -34,7 +34,7 @@
 }
 
 .deny-btn {
-  background-color: var(--pink);
+  /* background-color: var(--pink); */
   border: 1.5px solid #000;
   border-radius: 18px;
   padding: 9px 16px;
