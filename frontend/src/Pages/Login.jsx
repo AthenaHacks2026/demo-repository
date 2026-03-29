@@ -1,14 +1,24 @@
 import SignedOut_Header from "../Components/SignedOut_Header";
 import SkillTag from "../Components2/SkillTag";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "../styles/Login.css";
 
 function Login() {
+  const navigate = useNavigate();
+
   const skills = [
-    "Baking", "Knitting", "Coding",
-    "Drawing", "Sewing", "Cooking",
-    "Budgeting"
+    "Baking",
+    "Knitting",
+    "Coding",
+    "Drawing",
+    "Sewing",
+    "Cooking",
+    "Budgeting",
   ];
+
+  const handleLogin = () => {
+    navigate("/search");
+  };
 
   return (
     <div className="login-page">
@@ -16,8 +26,6 @@ function Login() {
         <SignedOut_Header />
 
         <div className="login-container">
-          
-          {/* LEFT SIDE */}
           <div className="left-panel">
             <h1 className="title">Skill Swap</h1>
             <p>Search and swap skills!</p>
@@ -30,21 +38,22 @@ function Login() {
             </div>
           </div>
 
-          {/* RIGHT SIDE */}
           <div className="right-panel">
             <h1 className="welcome">Welcome Back!</h1>
 
             <div className="login-box">
               <h2>✦ Log In</h2>
 
-              <input className="input-field" placeholder="Email" />
+              <input className="input-field" placeholder="Email" type="email" />
               <input
                 className="input-field"
                 placeholder="Password"
                 type="password"
               />
 
-              <button className="login-btn">Log In</button>
+              <button className="login-btn" onClick={handleLogin}>
+                Log In
+              </button>
             </div>
 
             <p className="signup-link">
@@ -53,7 +62,6 @@ function Login() {
               <Link to="/signup">Sign Up</Link>
             </p>
           </div>
-
         </div>
       </div>
     </div>

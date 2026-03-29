@@ -1,13 +1,41 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { useState } from "react";
 import Login_Header from "../Components/Login_Header";
 import "../styles/CreateRequest.css";
 
 function CreateRequest() {
+  const navigate = useNavigate();
+
+  const [requesting, setRequesting] = useState("");
+  const [offer, setOffer] = useState("");
+
   const mySkills = [
     { label: "Baking", className: "tag-baking" },
     { label: "Crochet", className: "tag-crochet" },
     { label: "Drawing", className: "tag-drawing" },
   ];
+
+  const handlePost = () => {
+    const newRequest = {
+      id: Date.now(),
+      profilePic: "/src/assets/image.png",
+      name: "Kenia",
+      description: "I learned how to crochet when i was 18 and i can draw ur cat :D",
+      skills: mySkills,
+      requesting: requesting.trim(),
+      offer: offer.trim(),
+    };
+
+    const existingRequests =
+      JSON.parse(localStorage.getItem("openRequests")) || [];
+
+    localStorage.setItem(
+      "openRequests",
+      JSON.stringify([newRequest, ...existingRequests])
+    );
+
+    navigate("/open-requests");
+  };
 
   return (
     <div className="create-page">
@@ -38,6 +66,8 @@ function CreateRequest() {
               <textarea
                 className="request-textarea"
                 placeholder="What do you need?"
+                value={requesting}
+                onChange={(e) => setRequesting(e.target.value)}
               />
             </div>
 
@@ -46,10 +76,14 @@ function CreateRequest() {
               <input
                 className="offer-input"
                 placeholder="What are you offering?"
+                value={offer}
+                onChange={(e) => setOffer(e.target.value)}
               />
             </div>
 
-            <button className="post-btn">Post Request</button>
+            <button className="post-btn" onClick={handlePost}>
+              Post Request
+            </button>
           </div>
         </div>
       </div>
