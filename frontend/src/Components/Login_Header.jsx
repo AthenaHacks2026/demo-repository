@@ -1,11 +1,6 @@
 import "../styles/Home.css";
 import "../styles/Header.css";
 import { Link } from "react-router-dom";
-import userImg from "../assets/temp_img.png";
-import star1 from "../assets/star1.png";
-
-import star2 from "../assets/star2.png";
-import star3 from "../assets/star3.png";
 import profilePic from "../assets/temp_img.png";
 
 function Login_Header() {
@@ -16,12 +11,13 @@ function Login_Header() {
         <nav className="nav-menu">
             <Link to="/inbox-received">Inbox</Link>
             <Link to="/search">Search Skills</Link>
-            <Link to="/services">Open Requests</Link>
+            <Link to="/open-requests">Open Requests</Link>
       </nav>
-      
-      <img src={profilePic} alt="Placeholder" width="50" height="50"/>
 
+      {/* FIXED: use class instead of width/height */}
+      <img src={profilePic} alt="Profile" className="nav-user-img" />
     </header>
   );
 }
+
 export default Login_Header;

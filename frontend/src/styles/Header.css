@@ -8,17 +8,24 @@
 }
 
 html,
-body {
+body,
+#root {
   width: 100%;
   min-height: 100%;
 }
 
+body {
+  margin: 0;
+  font-family: 'Comfortaa', sans-serif;
+}
+
 .navbar {
+  width: 100%;
   background-color: #C0E0FE;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 32px 32px 32px 32px;
+  padding: 32px;
 }
 
 .logo-box {
@@ -28,6 +35,7 @@ body {
   padding: 10px 18px;
   font-size: 15px;
   line-height: 1;
+  color: #222;
 }
 
 .nav-menu {
@@ -40,6 +48,11 @@ body {
   text-decoration: none;
   color: #222;
   font-size: 16px;
+  font-family: 'Comfortaa', sans-serif;
+}
+
+.nav-menu a:hover {
+  text-decoration: underline;
 }
 
 .login-btn {
@@ -50,4 +63,27 @@ body {
   font-size: 16px;
   font-family: 'Comfortaa', sans-serif;
   cursor: pointer;
+  color: #222;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.login-btn:hover {
+  opacity: 0.95;
+}
+
+.nav-user-img {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1.5px solid #000;
+  display: block;
+}
+.nav-user-img {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1.5px solid #000;
 }
