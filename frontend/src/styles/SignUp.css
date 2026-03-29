@@ -34,7 +34,6 @@ body {
 /* MAIN CONTAINER */
 .signup-shell {
   width: 100%;
-  max-width: 1210px;
   background: linear-gradient(to right, #c0dcf4 0 43%, #f6f0df 43% 100%);
   min-height: 860px;
   position: relative;

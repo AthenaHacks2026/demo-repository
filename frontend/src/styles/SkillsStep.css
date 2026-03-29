@@ -9,13 +9,11 @@
   width: 100%;
   min-height: 100vh;
   background: #a9c4df;
-  padding: 20px;
   font-family: 'Comfortaa', sans-serif;
 }
 
 .skills-shell {
   width: 100%;
-  max-width: 1200px;
   min-height: 860px;
   margin: 0 auto;
   position: relative;
@@ -25,7 +23,6 @@
   font-family: 'Dela Gothic One', sans-serif;
   font-size: 64px;
   text-align: center;
-  margin-top: 100px;
   color: #000;
 }
 
