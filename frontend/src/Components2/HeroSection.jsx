@@ -38,7 +38,10 @@ function HeroSection() {
           <Link to="/services" className="search-btn">
             Search Services →
           </Link>
-          <button className="offer-btn">Offer Services →</button>
+
+          <Link to="/login" className="offer-btn">
+            Offer Services →
+          </Link>
         </div>
       </div>
     </section>
