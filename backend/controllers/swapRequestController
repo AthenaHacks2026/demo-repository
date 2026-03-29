@@ -1,0 +1,115 @@
+const mongoose = require("mongoose");
+const SwapRequest = require("../models/SwapRequest");
+require("../models/User");
+
+// CREATE
+const createSwapRequest = async (req, res) => {
+  try {
+    const { sender, receiver, offering, skill_needed, message, status } = req.body;
+
+    const swapRequest = await SwapRequest.create({
+      sender,
+      receiver,
+      offering,
+      skill_needed,
+      message,
+      status,
+    });
+
+    res.status(201).json(swapRequest);
+  } catch (error) {
+    res.status(400).json({ message: error.message });
+  }
+};
+
+// READ ALL
+const getAllSwapRequests = async (req, res) => {
+  try {
+    const swapRequests = await SwapRequest.find()
+      .populate("sender", "name email avatar_url bio location skills")
+      .populate("receiver", "name email avatar_url bio location skills")
+      .sort({ createdAt: -1 });
+
+    res.status(200).json(swapRequests);
+  } catch (error) {
+    res.status(500).json({ message: error.message });
+  }
+};
+
+// READ ONE
+const getSwapRequestById = async (req, res) => {
+  try {
+    const { id } = req.params;
+
+    if (!mongoose.Types.ObjectId.isValid(id)) {
+      return res.status(400).json({ message: "Invalid swap request ID" });
+    }
+
+    const swapRequest = await SwapRequest.findById(id)
+      .populate("sender", "name email avatar_url bio location skills")
+      .populate("receiver", "name email avatar_url bio location skills");
+
+    if (!swapRequest) {
+      return res.status(404).json({ message: "Swap request not found" });
+    }
+
+    res.status(200).json(swapRequest);
+  } catch (error) {
+    res.status(500).json({ message: error.message });
+  }
+};
+
+// UPDATE
+const updateSwapRequest = async (req, res) => {
+  try {
+    const { id } = req.params;
+
+    if (!mongoose.Types.ObjectId.isValid(id)) {
+      return res.status(400).json({ message: "Invalid swap request ID" });
+    }
+
+    const updatedSwapRequest = await SwapRequest.findByIdAndUpdate(id, req.body, {
+      new: true,
+      runValidators: true,
+    })
+      .populate("sender", "name email avatar_url bio location skills")
+      .populate("receiver", "name email avatar_url bio location skills");
+
+    if (!updatedSwapRequest) {
+      return res.status(404).json({ message: "Swap request not found" });
+    }
+
+    res.status(200).json(updatedSwapRequest);
+  } catch (error) {
+    res.status(400).json({ message: error.message });
+  }
+};
+
+// DELETE
+const deleteSwapRequest = async (req, res) => {
+  try {
+    const { id } = req.params;
+
+    if (!mongoose.Types.ObjectId.isValid(id)) {
+      return res.status(400).json({ message: "Invalid swap request ID" });
+    }
+
+    const deletedSwapRequest = await SwapRequest.findByIdAndDelete(id);
+
+    if (!deletedSwapRequest) {
+      return res.status(404).json({ message: "Swap request not found" });
+    }
+
+    res.status(200).json({ message: "Swap request deleted successfully" });
+  } catch (error) {
+    res.status(500).json({ message: error.message });
+  }
+};
+
+module.exports = {
+  createSwapRequest,
+  getAllSwapRequests,
+  getSwapRequestById,
+  updateSwapRequest,
+  deleteSwapRequest,
+};
