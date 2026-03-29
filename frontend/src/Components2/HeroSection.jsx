@@ -35,14 +35,13 @@ function HeroSection() {
         <p>Search and swap skills!</p>
 
         <div className="hero-buttons">
-          <Link to="/services" className="search-btn">
-            Search Services →
-          </Link>
 
-          <Link to="/login" className="offer-btn">
-            Offer Services →
-          </Link>
-        </div>
+          <a href="#skills" className="search-btn">
+            Search Services →
+          </a>
+
+          <Link to="/login" className="offer-btn">Offer Services →</Link>
+      </div>
       </div>
     </section>
   );
