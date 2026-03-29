@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  font-family: 'Comfortaa', sans-serif;
+  background: #f4eddc;
+}
+
+/* PAGE */
+.login-page {
+  width: 100%;
+  min-height: 100vh;
+}
+
+.login-shell {
+  width: 100%;
+  min-height: 100vh;
+}
+
+/* LAYOUT */
+.login-container {
+  display: flex;
+  width: 100%;
+  min-height: calc(100vh - 90px);
+}
+
+/* LEFT */
+.left-panel {
+  width: 50%;
+  background: #f4eddc;
+  padding: 80px 40px;
+}
+
+.title {
+  font-family: 'Dela Gothic One';
+  font-size: 56px;
+  margin-bottom: 10px;
+}
+
+.skills-grid {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: repeat(3, max-content);
+  gap: 12px;
+}
+
+/* RIGHT */
+.right-panel {
+  width: 50%;
+  background: #a9c4df;
+  padding: 80px 40px;
+}
+
+.welcome {
+  font-family: 'Dela Gothic One';
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+/* LOGIN BOX */
+.login-box {
+  max-width: 420px;
+  background: #f7f7f7;
+  border: 1.5px solid #666;
+  border-radius: 18px;
+  padding: 24px;
+}
+
+.login-box h2 {
+  text-align: center;
+  font-family: 'Dela Gothic One';
+  margin-bottom: 16px;
+}
+
+.input-field {
+  width: 100%;
+  height: 42px;
+  margin-bottom: 12px;
+  border: 1px solid #666;
+  border-radius: 6px;
+  padding: 10px;
+}
+
+/* BUTTON */
+.login-btn {
+  width: 180px;
+  margin: 12px auto 0;
+  display: block;
+  padding: 10px;
+  border-radius: 999px;
+  border: 1.5px solid #000;
+  background: #e5b2d5;
+  cursor: pointer;
+}
+
+/* SIGNUP LINK */
+.signup-link {
+  margin-top: 20px;
+  text-align: center;
+  color: #4e63c8;
+}
