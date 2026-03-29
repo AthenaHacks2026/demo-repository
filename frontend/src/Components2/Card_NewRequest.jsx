@@ -1,3 +1,7 @@
+import "../styles/Approved.css";
+import { Link } from "react-router-dom";
+
+
 function Card_NewRequest({ profilePic, name, description, skills, lookingFor, tradeDescription}) {
   return (
     // USER - PROFILE, NAME, DESCRP
@@ -30,7 +34,12 @@ function Card_NewRequest({ profilePic, name, description, skills, lookingFor, tr
 
       <div className="container">
         <button className="deny-btn">Deny</button>
-        <button className="accept-btn">Accept</button>
+        
+        <Link to="/approved" className="accept-btn">
+        Accept
+        </Link>
+          
+    
       </div>
       
     </div>
