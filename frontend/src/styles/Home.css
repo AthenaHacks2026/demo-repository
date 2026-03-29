@@ -74,8 +74,8 @@ body {
 
 .hero {
   display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
+  justify-content: center;
+  align-items: center;
   padding: 86px 54px 40px;
   gap: 48px;
 }
