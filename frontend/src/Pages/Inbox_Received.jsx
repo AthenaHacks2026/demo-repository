@@ -20,7 +20,7 @@ function Inbox_Received() {
 
         <div className="search-header">
           <h1>Inbox</h1>
-          <p>All your requests</p>
+          <p>All your received requests</p>
 
           <Inbox_Navigation active="inbox" />
         </div>
