@@ -11,6 +11,7 @@ function Inbox_Navigation() {
           <Link to="/inbox-received">
             <button className="received-btn">Received</button>
           </Link>
+          
 
           <Link to="/inbox-outgoing">
             <button className="outgoing-btn">Outgoing</button>
