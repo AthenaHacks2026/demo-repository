@@ -12,6 +12,8 @@ import Approved from "./Pages/Approved";
 import Inbox_Received from "./Pages/Inbox_Received";
 import Inbox_Accepted from "./Pages/Inbox_Accepted";
 
+import Inbox_Outgoing from "./Pages/Inbox_Outgoing";
+
 
 function App() {
   return (
@@ -27,8 +29,7 @@ function App() {
       <Route path="/open-requests" element={<OpenRequests />} />
       <Route path="/approved" element={<Approved />} />
       <Route path="/inbox-received" element={<Inbox_Received />} />
-      
-      
+      <Route path="/inbox-outgoing" element={<Inbox_Outgoing />} />
       <Route path="/inbox-accepted" element={<Inbox_Accepted />} />
     </Routes>
   );
