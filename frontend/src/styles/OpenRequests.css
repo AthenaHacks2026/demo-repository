@@ -198,6 +198,46 @@ body {
   opacity: 0.96;
 }
 
+.expired-btn {
+  margin-top: auto;
+  align-self: center;
+  min-width: 110px;
+  padding: 10px 24px;
+  border-radius: 999px;
+  border: 1.5px solid #000;
+  background: #FFB2B3;
+  font-size: 16px;
+  font-family: 'Comfortaa', sans-serif;
+  color: #222;
+  text-decoration: none;
+  text-align: center;
+  cursor: pointer;
+}
+
+.expired-btn:hover {
+  opacity: 0.96;
+}
+
+.pending-btn {
+  margin-top: auto;
+  align-self: center;
+  min-width: 110px;
+  padding: 10px 24px;
+  border-radius: 999px;
+  border: 1.5px solid #000;
+  background: #BEC6C5;
+  font-size: 16px;
+  font-family: 'Comfortaa', sans-serif;
+  color: #222;
+  text-decoration: none;
+  text-align: center;
+  cursor: pointer;
+}
+
+.pending-btn:hover {
+  opacity: 0.96;
+}
+
 @media (max-width: 1024px) {
   .open-requests-grid {
     grid-template-columns: repeat(2, 1fr);

@@ -8,7 +8,7 @@ function Login_Header() {
   return (
     <header className="navbar">
       <Link to="/" className="logo-box">
-        Logo Here
+        Skill Swap
       </Link>
 
       <nav className="nav-menu">

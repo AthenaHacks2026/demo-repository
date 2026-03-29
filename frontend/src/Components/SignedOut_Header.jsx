@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 function SignedOut_Header() {
   return (
     <header className="navbar">
-      <div className="logo-box">Logo Here</div>
+      <div className="logo-box">Skill Swap</div>
 
       <nav className="nav-menu">
         <Link to="/">Home</Link>
