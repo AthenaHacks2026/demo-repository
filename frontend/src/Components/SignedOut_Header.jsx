@@ -9,8 +9,8 @@ function SignedOut_Header() {
 
       <nav className="nav-menu">
         <Link to="/">Home</Link>
-        <Link to="/">About</Link>
-        <Link to="/search">Skills</Link>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
         <Link to="/signup">Sign Up</Link>
         <Link to="/login" className="login-btn">
           Login

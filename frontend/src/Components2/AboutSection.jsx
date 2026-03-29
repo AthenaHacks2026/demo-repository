@@ -5,7 +5,7 @@ import star3 from "../assets/star3.png";
 
 function AboutSection() {
   return (
-    <section className="about-section">
+    <section id="about" className="about-section">
       <h2>Who we are</h2>
 
       <div className="cards-container">

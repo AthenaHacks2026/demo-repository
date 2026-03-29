@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import profilePic from "../assets/image.png";
 import UserCard from "./UserCard";
 
@@ -11,7 +12,7 @@ function ServicesSection() {
   ];
 
   return (
-    <section className="services-section">
+    <section className="services-section" id="skills">
       <h2>Skills near you</h2>
 
       <input
@@ -24,7 +25,10 @@ function ServicesSection() {
         Can’t find the skills you’re looking for? Login to create a request.
       </p>
 
-      <button className="login-small">Login</button>
+      <Link to="/login">
+        <button className="login-small">Login</button>
+      </Link>
+      
 
       <div className="cards-grid">
         {users.map((user) => (
