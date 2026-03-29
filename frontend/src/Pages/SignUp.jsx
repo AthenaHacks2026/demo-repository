@@ -14,6 +14,7 @@ function SignUp() {
     "Design",
     "Gaming",
     "Dog Grooming",
+    "Budgeting",
   ];
 
   return (
@@ -21,20 +22,30 @@ function SignUp() {
       <div className="signup-shell">
         <SignedOut_Header />
 
-        <div className="signup-container">
-          <div className="left-panel">
+        <main className="signup-container">
+          <section className="left-panel">
             <h1 className="signup-title">Welcome!</h1>
 
             <div className="signup-box">
               <h2>✦ Sign Up</h2>
 
-              <input className="input-field" placeholder="Email" type="email" />
               <input
                 className="input-field"
-                placeholder="Password"
-                type="password"
+                type="email"
+                placeholder="Email"
               />
-              <input className="input-field" placeholder="Location" type="text" />
+
+              <input
+                className="input-field"
+                type="password"
+                placeholder="Password"
+              />
+
+              <input
+                className="input-field"
+                type="text"
+                placeholder="Location"
+              />
 
               <Link to="/skills-step" className="signup-btn">
                 Sign Up
@@ -46,27 +57,30 @@ function SignUp() {
               <br />
               <Link to="/">Log In</Link>
             </p>
-          </div>
+          </section>
 
-          <div className="right-panel">
+          <section className="right-panel">
             <div className="skills-preview">
-              <h1>Skill Swap</h1>
+              <h1 className="skills-title">Skill Swap</h1>
+
               <p>Search and swap skills!</p>
               <p>Because not everything should cost money.</p>
 
               <div className="skills-grid">
                 {skills.map((skill, index) => (
                   <div
-                    key={index}
-                    className={skill === "Dog Grooming" ? "skill-tag long" : "skill-tag"}
+                    key={`${skill}-${index}`}
+                    className={`skill-tag ${
+                      skill === "Dog Grooming" ? "long" : ""
+                    }`}
                   >
                     ✦ {skill}
                   </div>
                 ))}
               </div>
             </div>
-          </div>
-        </div>
+          </section>
+        </main>
       </div>
     </div>
   );

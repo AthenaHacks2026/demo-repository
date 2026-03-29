@@ -1,4 +1,4 @@
-import Navbar from "../Components2/Navbar";
+import SignedOut_Header from "../Components/SignedOut_Header";
 import SkillTag from "../Components2/SkillTag";
 import { Link } from "react-router-dom";
 import "../styles/Login.css";
@@ -7,14 +7,13 @@ function Login() {
   const skills = [
     "Baking", "Knitting", "Coding",
     "Drawing", "Sewing", "Cooking",
-    "Budgeting", "Design", "Gaming",
-    "Dog Grooming", "Budgeting"
+    "Budgeting"
   ];
 
   return (
     <div className="login-page">
       <div className="login-shell">
-        <Navbar />
+        <SignedOut_Header />
 
         <div className="login-container">
           
