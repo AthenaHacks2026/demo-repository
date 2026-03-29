@@ -55,7 +55,7 @@ function SignUp() {
             <p className="login-text">
               Already have an account?
               <br />
-              <Link to="/">Log In</Link>
+           <Link to="/login">Log In</Link>
             </p>
           </section>
 
