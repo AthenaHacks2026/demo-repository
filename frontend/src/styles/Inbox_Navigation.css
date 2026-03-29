@@ -1,0 +1,45 @@
+.container {
+    display: flex;
+    column-gap: 16px;
+}
+
+.received-btn {
+  background-color: #e9b6d8;
+  border: 1.5px solid #000;
+  border-radius: 18px;
+  padding: 9px 16px;
+  font-size: 16px;
+  font-family: 'Comfortaa', sans-serif;
+  cursor: pointer;
+}
+
+.outgoing-btn {
+  background-color: #90A8F5;
+  border: 1.5px solid #000;
+  border-radius: 18px;
+  padding: 9px 16px;
+  font-size: 16px;
+  font-family: 'Comfortaa', sans-serif;
+  cursor: pointer;
+}
+
+.accepted-btn {
+  background-color: #CCF7A6;
+  border: 1.5px solid #000;
+  border-radius: 18px;
+  padding: 9px 16px;
+  font-size: 16px;
+  font-family: 'Comfortaa', sans-serif;
+  cursor: pointer;
+}
+
+.deny-btn {
+  background-color: #e9b6d8;
+  border: 1.5px solid #000;
+  border-radius: 18px;
+  padding: 9px 16px;
+  font-size: 16px;
+  font-family: 'Comfortaa', sans-serif;
+  cursor: pointer;
+}
+

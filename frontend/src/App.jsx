@@ -8,6 +8,9 @@ import SearchSkills from "./Pages/SearchSkills";
 import CreateRequest from "./Pages/CreateRequest";
 import OpenRequests from "./Pages/OpenRequests";
 import Approved from "./Pages/Approved";
+import Inbox_Received from "./Pages/Inbox_Received";
+import Inbox_Accepted from "./Pages/Inbox_Accepted";
+
 
 function App() {
   return (
@@ -21,6 +24,9 @@ function App() {
       <Route path="/create-request" element={<CreateRequest />} />
       <Route path="/open-requests" element={<OpenRequests />} />
       <Route path="/approved" element={<Approved />} />
+      <Route path="/inbox-received" element={<Inbox_Received />} />
+      
+      <Route path="/inbox-accepted" element={<Inbox_Accepted />} />
     </Routes>
   );
 }

@@ -14,8 +14,8 @@ function Login_Header() {
         <div className="logo-box">Logo Here</div>
         
         <nav className="nav-menu">
-            <Link to="/">Inbox</Link>
-            <Link to="/">Search Skills</Link>
+            <Link to="/inbox-received">Inbox</Link>
+            <Link to="/search">Search Skills</Link>
             <Link to="/services">Open Requests</Link>
       </nav>
       
