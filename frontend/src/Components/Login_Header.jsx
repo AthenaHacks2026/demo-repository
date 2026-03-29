@@ -1,4 +1,4 @@
-import "../styles/Home.css";
+/*import "../styles/Home.css";
 import "../styles/Header.css";
 import { Link } from "react-router-dom";
 import userImg from "../assets/temp_img.png";
@@ -24,4 +24,4 @@ function SignedOut_Header() {
     </header>
   );
 }
-export default SignedOut_Header;
+export default SignedOut_Header;*/

@@ -1,23 +1,24 @@
+import "../styles/Home.css";
+import "../styles/Header.css";
 import { Link } from "react-router-dom";
+import star1 from "../assets/star1.png";
+import star2 from "../assets/star2.png";
+import star3 from "../assets/star3.png";
+import profilePic from "../assets/image.png";
 
 function Navbar() {
   return (
-    <nav className="navbar">
-      <div className="logo-box">Skill Swap</div>
+    <header className="navbar">
+      <div className="logo-box">Logo Here</div>
 
-      <div className="nav-menu">
+      <nav className="nav-menu">
         <Link to="/">Home</Link>
         <Link to="/">About</Link>
         <Link to="/services">Skills</Link>
-
-        <Link to="/signup" className="login-btn">
-          Sign Up
-        </Link>
-
+        <Link to="/profile">Sign Up</Link>
         <button className="login-btn">Login</button>
-      </div>
-    </nav>
+      </nav>
+    </header>
   );
 }
-
 export default Navbar;
