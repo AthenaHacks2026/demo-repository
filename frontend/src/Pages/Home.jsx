@@ -1,3 +1,4 @@
+<link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&display=swap" rel="stylesheet"></link>
 import "../styles/Home.css";
 import { Link } from "react-router-dom";
 import star1 from "../assets/star1.png";
@@ -43,12 +44,11 @@ function Home() {
         <div className="cards-container">
           <div className="info-card mission-card">
             <div className="star">
-              <img src={star1} alt="Mission icon" />
+              <img src={star3} alt="Mission icon" />
             </div>
             <h3>Mission</h3>
             <p>
-              Dedicated to making skills accessible for your community for
-              mutual benefit.
+             ✦ Dedicated to making skills accessible for your community for mutual benefit
             </p>
           </div>
 
@@ -58,21 +58,19 @@ function Home() {
             </div>
             <h3>Goal</h3>
             <p>
-              Dedicated to making skills accessible to your community for mutual
-              benefit.
+              ✦ Dedicated to making skills accessible for your community for mutual benefit
             </p>
           </div>
 
           <div className="info-card vision-card">
             <div className="star">
-              <img src={star3} alt="Vision icon" />
+              <img src={star1} alt="Vision icon" />
             </div>
             <h3>Vision</h3>
-            <p>
-              Create a friendly place where people can share skills and help one
-              another.
-            </p>
-          </div>
+  <p>✦ Cute!</p>
+  <p>✦ Blah BLha</p>
+</div>
+           
         </div>
       </section>
 
