@@ -1,9 +1,9 @@
-<link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&display=swap" rel="stylesheet"></link>
 import "../styles/Home.css";
 import { Link } from "react-router-dom";
 import star1 from "../assets/star1.png";
 import star2 from "../assets/star2.png";
 import star3 from "../assets/star3.png";
+import profilePic from "../assets/image.png";
 
 function Home() {
   return (
@@ -30,9 +30,9 @@ function Home() {
 
             <div className="hero-buttons">
               <Link to="/services" className="search-btn">
-                Search Services
+                Search Services →
               </Link>
-              <button className="offer-btn">Offer Services</button>
+              <button className="offer-btn">Offer Services →</button>
             </div>
           </div>
         </section>
@@ -48,7 +48,8 @@ function Home() {
             </div>
             <h3>Mission</h3>
             <p>
-             ✦ Dedicated to making skills accessible for your community for mutual benefit
+              ✦ Dedicated to making skills accessible for your community for
+              mutual benefit
             </p>
           </div>
 
@@ -58,7 +59,8 @@ function Home() {
             </div>
             <h3>Goal</h3>
             <p>
-              ✦ Dedicated to making skills accessible for your community for mutual benefit
+              ✦ Dedicated to making skills accessible for your community for
+              mutual benefit
             </p>
           </div>
 
@@ -67,15 +69,56 @@ function Home() {
               <img src={star1} alt="Vision icon" />
             </div>
             <h3>Vision</h3>
-  <p>✦ Cute!</p>
-  <p>✦ Blah BLha</p>
-</div>
-           
+            <p>✦ Cute!</p>
+            <p>✦ Blah Blah</p>
+          </div>
         </div>
       </section>
 
       <section className="services-section">
-        <h2>Services near you</h2>
+        <h2>Skills near you</h2>
+
+        <input
+          type="text"
+          className="zip-input"
+          placeholder="Enter your zipcode"
+        />
+
+        <p className="zip-helper">
+          Can’t find the skills you’re looking for? Login to create a request.
+        </p>
+
+        <button className="login-small">Login</button>
+
+        <div className="cards-grid">
+          {[1, 2, 3, 4, 5, 6].map((card) => (
+            <div className="user-card" key={card}>
+              <img src={profilePic} alt="Profile" className="profile-img" />
+
+              <h3 className="user-name">Kenia</h3>
+
+              <p className="user-description">
+                I learned how to crochet when I was 18 and can draw or cut :D
+              </p>
+
+              <div className="skills-block">
+                <p className="label">Skills</p>
+                <div className="tags-row">
+                  <span className="tag">Baking</span>
+                  <span className="tag">Crochet</span>
+                  <span className="tag">Drawing</span>
+                </div>
+              </div>
+
+              <div className="looking-block">
+                <p className="label">Looking For</p>
+                <p className="looking-text">Anything LMK :D</p>
+              </div>
+
+              <button className="request-btn">Send Swap Request</button>
+            </div>
+          ))}
+        </div>
       </section>
     </div>
   );

@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap');
+
 * {
   margin: 0;
   padding: 0;
@@ -5,7 +8,7 @@
 }
 
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Comfortaa', sans-serif;
   background-color: #dff1ec;
   color: #222;
 }
@@ -51,11 +54,12 @@ body {
 }
 
 .login-btn {
-  background-color: #f5bfd8;
-  border: 2px solid #8a697a;
+  background-color: #ffcbf4;
+  border: 2px solid #000;
   border-radius: 20px;
   padding: 8px 18px;
   font-size: 18px;
+  font-family: 'Comfortaa', sans-serif;
   cursor: pointer;
 }
 
@@ -78,8 +82,9 @@ body {
 }
 
 .hero-text h1 {
+  font-family: 'Dela Gothic One', sans-serif;
   font-size: 82px;
-  font-weight: 900;
+  font-weight: 400;
   margin-bottom: 25px;
   color: #000;
 }
@@ -102,6 +107,7 @@ body {
   padding: 12px 24px;
   border-radius: 25px;
   font-size: 20px;
+  font-family: 'Comfortaa', sans-serif;
   cursor: pointer;
   text-decoration: none;
   display: inline-block;
@@ -109,13 +115,13 @@ body {
 }
 
 .search-btn {
-  background-color: #f5bfd8;
-  border: 2px solid #8a697a;
+  background-color: #ffcbf4;
+  border: 2px solid #000;
 }
 
 .offer-btn {
-  background-color: #cfe88d;
-  border: 2px solid #7f9259;
+  background-color: #ccf7a6;
+  border: 2px solid #000;
 }
 
 .about-section {
@@ -127,8 +133,9 @@ body {
 }
 
 .about-section h2 {
-  font-size: 58px;
-  font-weight: 900;
+  font-family: 'Dela Gothic One', sans-serif;
+  font-size: 64px;
+  font-weight: 400;
   margin-bottom: 50px;
   color: #000;
 }
@@ -153,7 +160,9 @@ body {
 }
 
 .info-card h3 {
+  font-family: 'Dela Gothic One', sans-serif;
   font-size: 22px;
+  font-weight: 400;
   margin-bottom: 12px;
 }
 
@@ -202,9 +211,142 @@ body {
 }
 
 .services-section h2 {
-  font-size: 88px;
-  font-weight: 900;
+  font-family: 'Dela Gothic One', sans-serif;
+  font-size: 64px;
+  font-weight: 400;
   color: #000;
+  margin-bottom: 30px;
+}
+
+.zip-input {
+  width: 100%;
+  max-width: 590px;
+  padding: 18px 32px;
+  border-radius: 64px;
+  border: 1px solid #000;
+  background: #efefef;
+  font-family: 'Comfortaa', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  outline: none;
+}
+
+.zip-helper {
+  margin-top: 20px;
+  font-family: 'Comfortaa', sans-serif;
+  font-size: 16px;
+  color: #000;
+}
+
+.login-small {
+  margin-top: 16px;
+  padding: 10px 30px;
+  border-radius: 64px;
+  border: 1px solid #000;
+  background: #ffcbf4;
+  font-family: 'Comfortaa', sans-serif;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.cards-grid {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 28px;
+  width: 100%;
+  max-width: 1250px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.user-card {
+  width: 100%;
+  max-width: 390px;
+  min-height: 320px;
+  background: #f3f3f3;
+  border: 2px solid #6f6f6f;
+  border-radius: 18px;
+  padding: 20px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 14px;
+  justify-self: center;
+}
+
+.profile-img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 2px solid #000;
+  object-fit: cover;
+  display: block;
+}
+
+.user-name {
+  font-family: 'Dela Gothic One', sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.1;
+  color: #000;
+}
+
+.user-description {
+  font-family: 'Comfortaa', sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #444;
+  max-width: 280px;
+  text-align: left;
+}
+
+.skills-block,
+.looking-block {
+  width: 100%;
+  text-align: left;
+}
+
+.label {
+  font-family: 'Dela Gothic One', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: #000;
+  margin-bottom: 8px;
+}
+
+.tags-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.tag {
+  padding: 6px 16px;
+  border-radius: 999px;
+  border: 1px solid #6ea3e6;
+  background: #d8ebff;
+  font-family: 'Comfortaa', sans-serif;
+  font-size: 14px;
+  color: #000;
+}
+
+.looking-text {
+  font-family: 'Comfortaa', sans-serif;
+  font-size: 14px;
+  color: #444;
+}
+
+.request-btn {
+  margin-top: auto;
+  align-self: center;
+  padding: 14px 36px;
+  border-radius: 999px;
+  border: 2px solid #9a6a86;
+  background: #f6c1e4;
+  font-family: 'Comfortaa', sans-serif;
+  font-size: 16px;
+  cursor: pointer;
 }
 
 @media (max-width: 1000px) {
@@ -236,5 +378,29 @@ body {
 
   .services-section h2 {
     font-size: 54px;
+  }
+}
+
+@media (max-width: 900px) {
+  .cards-grid {
+    grid-template-columns: repeat(2, minmax(280px, 1fr));
+  }
+}
+
+@media (max-width: 650px) {
+  .cards-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .user-card {
+    max-width: 100%;
+  }
+
+  .zip-input {
+    padding: 14px 20px;
+  }
+
+  .zip-helper {
+    font-size: 14px;
   }
 }
