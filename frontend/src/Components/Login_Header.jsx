@@ -14,8 +14,9 @@ function Login_Header() {
         <Link to="/open-requests">Open Requests</Link>
       </nav>
 
-      {/* FIXED: use class instead of width/height */}
-      <img src={profilePic} alt="Profile" className="nav-user-img" />
+      <Link to="/profile">
+        <img src={profilePic} alt="Profile" className="nav-user-img" />
+      </Link>
     </header>
   );
 }

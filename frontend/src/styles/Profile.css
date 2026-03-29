@@ -1,0 +1,223 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  min-height: 100%;
+}
+
+body {
+  font-family: 'Comfortaa', sans-serif;
+  background: #f6f0df;
+  color: #222;
+}
+
+/* PAGE */
+.profile-page {
+  width: 100%;
+  min-height: 100vh;
+  background: #f6f0df;
+}
+
+/* MAIN CONTENT AREA UNDER HEADER */
+.profile-main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 56px 32px 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 28px;
+}
+
+/* HERO */
+.profile-hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+}
+
+.profile-title {
+  font-family: 'Dela Gothic One', sans-serif;
+  font-size: 72px;
+  line-height: 1;
+  color: #000;
+  text-align: center;
+}
+
+.profile-img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 1.5px solid #000;
+  object-fit: cover;
+}
+
+/* TWO CARDS */
+.profile-content {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 24px;
+  flex-wrap: nowrap;
+}
+
+/* CARD */
+.profile-card {
+  width: 490px;
+  min-height: 360px;
+  background: #f8f8f8;
+  border: 1.5px solid #555;
+  border-radius: 18px;
+  padding: 24px 26px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+/* CARD HEADER */
+.card-header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card-header h2 {
+  font-family: 'Dela Gothic One', sans-serif;
+  font-size: 24px;
+  line-height: 1.1;
+  color: #000;
+}
+
+.edit-icon {
+  font-size: 24px;
+  line-height: 1;
+  cursor: pointer;
+}
+
+/* TEXT */
+.bio {
+  font-size: 12px;
+  line-height: 1.45;
+  color: #777;
+  margin-bottom: 6px;
+}
+
+.profile-card h3 {
+  font-family: 'Dela Gothic One', sans-serif;
+  font-size: 16px;
+  line-height: 1.2;
+  color: #000;
+  margin-top: 4px;
+}
+
+/* SKILLS */
+.skills-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 6px;
+}
+
+/* If your SkillTag component uses its own class, this helps it fit */
+.skills-row .skill-tag,
+.skill-tag {
+  min-height: 28px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  border: 1px solid #444;
+  font-size: 12px;
+}
+
+/* INPUTS */
+.profile-card input,
+.profile-card .input-field {
+  width: 100%;
+  height: 42px;
+  border: 1.2px solid #777;
+  border-radius: 8px;
+  padding: 0 12px;
+  background: #fff;
+  font-family: 'Comfortaa', sans-serif;
+  font-size: 14px;
+  color: #222;
+  outline: none;
+}
+
+.profile-card input::placeholder,
+.profile-card .input-field::placeholder {
+  color: #8a8a8a;
+}
+
+/* LOGOUT BUTTON */
+.logout-btn {
+  display: block;
+  margin: 20px auto 0; /* centers horizontally */
+
+  width: 180px;
+  height: 56px;
+
+  border-radius: 999px;
+  border: 1.5px solid #000;
+  background: #ffcbf4;
+
+  font-family: 'Dela Gothic One', sans-serif;
+  font-size: 20px;
+  color: #000;
+
+  cursor: pointer;
+}
+
+.logout-btn:hover {
+  opacity: 0.96;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1100px) {
+  .profile-main {
+    padding: 42px 20px 36px;
+  }
+
+  .profile-content {
+    flex-wrap: wrap;
+  }
+
+  .profile-card {
+    width: 100%;
+    max-width: 560px;
+  }
+}
+
+@media (max-width: 700px) {
+  .profile-title {
+    font-size: 48px;
+  }
+
+  .profile-img {
+    width: 120px;
+    height: 120px;
+  }
+
+  .profile-card {
+    padding: 20px;
+  }
+.edit-icon-img {
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+}
+
+.edit-icon-img:hover {
+  opacity: 0.85;
+}}

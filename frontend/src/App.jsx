@@ -28,6 +28,7 @@ function App() {
       <Route path="/approved" element={<Approved />} />
       <Route path="/inbox-received" element={<Inbox_Received />} />
       
+      
       <Route path="/inbox-accepted" element={<Inbox_Accepted />} />
     </Routes>
   );
