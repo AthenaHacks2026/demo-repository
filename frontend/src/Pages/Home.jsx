@@ -30,8 +30,7 @@ function Home() {
               <span className="hero-skill">✦ Sewing</span>
               <span className="hero-skill">✦ Budgeting</span>
               <span className="hero-skill">✦ Design</span>
-              <span className="hero-skill">✦ Gaming</span>
-              <span className="hero-skill long">✦ Dog Grooming</span>
+             
               <span className="hero-skill">✦ Coding</span>
               <span className="hero-skill">✦ Cooking</span>
               <span className="hero-skill">✦ Budgeting</span>
