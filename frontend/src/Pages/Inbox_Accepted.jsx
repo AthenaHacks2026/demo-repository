@@ -1,44 +1,48 @@
-import { Link } from "react-router-dom";
+import { useEffect, useState } from "react";
 import Login_Header from "../Components/Login_Header";
-import UserCard from "../Components2/UserCard";
-import profilePic from "../assets/randy.png";
-import "../styles/SearchSkills.css";
-import Inbox_Navigation from "../Components/Inbox_Navigation";
-import Card_AcceptedRequest from "../Components2/Card_AcceptedRequest";
+import { getInboxByType } from "../api/mockApi";
 
 function Inbox_Accepted() {
-  const users = [1, 2, 3, 4];
+  const [items, setItems] = useState([]);
+  const [loading, setLoading] = useState(true);
 
-  const skillTags = [
-    { label: "Baking", className: "tag-baking" },
-  ];
+  useEffect(() => {
+    const loadInbox = async () => {
+      try {
+        const data = await getInboxByType("accepted");
+        setItems(data);
+      } catch (error) {
+        console.error("Failed to load accepted inbox:", error);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    loadInbox();
+  }, []);
 
   return (
-    <div className="search-page">
-      <div className="search-shell">
-        <Login_Header active="inbox" />
+    <div>
+      <Login_Header />
+      <main style={{ padding: "30px" }}>
+        <h1>Accepted Matches</h1>
 
-        <div className="search-header">
-          <h1>Inbox</h1>
-          <p>All your requests</p>
-
-          <Inbox_Navigation active="inbox-accepted" />
-        </div>
-
-        <div className="cards-grid">
-          {users.map((user) => (
-            <Card_AcceptedRequest
-              key={user}
-              profilePic={profilePic}
-              name="Randy"
-              description="I learned how to crochet when I was 18 and i can draw ur cat :D"
-              skills={skillTags}
-              lookingFor="Anything lmk :D"
-              tradeDescription="I’ve been craving a cake! I am willing to trade a 15 minute photo session??"
-            />
-          ))}
-        </div>
-      </div>
+        {loading ? (
+          <p>Loading matches...</p>
+        ) : items.length === 0 ? (
+          <p>No accepted matches yet.</p>
+        ) : (
+          items.map((item) => (
+            <div key={item.id} className="inbox-card">
+              <h3>{item.otherUserName}</h3>
+              <p>{item.message}</p>
+              <p>
+                <strong>Request:</strong> {item.requestTitle}
+              </p>
+            </div>
+          ))
+        )}
+      </main>
     </div>
   );
 }

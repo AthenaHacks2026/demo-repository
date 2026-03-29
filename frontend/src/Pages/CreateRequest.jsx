@@ -1,92 +1,126 @@
 import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
-import Login_Header from "../Components/Login_Header";
-import "../styles/CreateRequest.css";
+import SignedOut_Header from "../Components/SignedOut_Header";
+import { signupUser } from "../api/mockApi";
+import "../styles/SignUp.css";
 
-function CreateRequest() {
+function SignUp() {
   const navigate = useNavigate();
-  const [requesting, setRequesting] = useState("");
-  const [offer, setOffer] = useState("");
 
-  const mySkills = [
-    { label: "Baking", className: "tag-baking" },
-    { label: "Crochet", className: "tag-crochet" },
-    { label: "Drawing", className: "tag-drawing" },
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [location, setLocation] = useState("");
+  const [loading, setLoading] = useState(false);
+  const [errorMessage, setErrorMessage] = useState("");
+
+  const skills = [
+    "Baking",
+    "Knitting",
+    "Coding",
+    "Drawing",
+    "Sewing",
+    "Cooking",
+    "Budgeting",
+    "Design",
+    "Gaming",
+    "Dog Grooming",
   ];
 
-  const handlePost = () => {
-    const newRequest = {
-      id: Date.now(),
-      name: "Kenia",
-      description: "I learned how to crochet when I was 18 and I can draw your cat :D",
-      skills: mySkills,
-      requesting: requesting.trim(),
-      offer: offer.trim(),
-    };
+  const handleSignup = async () => {
+    setErrorMessage("");
 
-    const existingRequests =
-      JSON.parse(localStorage.getItem("openRequests")) || [];
+    if (!email.trim() || !password.trim() || !location.trim()) {
+      setErrorMessage("Please fill in all fields.");
+      return;
+    }
 
-    localStorage.setItem(
-      "openRequests",
-      JSON.stringify([newRequest, ...existingRequests])
-    );
-
-    navigate("/open-requests");
+    try {
+      setLoading(true);
+      await signupUser({ email, password, location });
+      navigate("/skills-step");
+    } catch (error) {
+      setErrorMessage(error.message);
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
-    <div className="create-page">
-      <Login_Header />
+    <div className="signup-page">
+      <div className="signup-shell">
+        <SignedOut_Header />
 
-      <main className="create-main">
-        <div className="create-top-row">
-          <Link to="/search" className="back-btn">
-            ← Go back
-          </Link>
-        </div>
+        <main className="signup-container">
+          <section className="left-panel">
+            <h1 className="signup-title">Welcome!</h1>
 
-        <div className="request-card">
-          <h1>Create Request</h1>
+            <div className="signup-box">
+              <h2>✦ Sign Up</h2>
 
-          <div className="form-section">
-            <p className="section-label">My Skills</p>
-            <div className="tags-row">
-              {mySkills.map((skill, index) => (
-                <span key={index} className={`tag ${skill.className}`}>
-                  {skill.label}
-                </span>
-              ))}
+              <input
+                className="input-field"
+                type="email"
+                placeholder="Email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+              />
+
+              <input
+                className="input-field"
+                type="password"
+                placeholder="Password"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+              />
+
+              <input
+                className="input-field"
+                type="text"
+                placeholder="Location"
+                value={location}
+                onChange={(e) => setLocation(e.target.value)}
+              />
+
+              {errorMessage && <p className="error-text">{errorMessage}</p>}
+
+              <button
+                className="signup-btn"
+                onClick={handleSignup}
+                disabled={loading}
+              >
+                {loading ? "Creating Account..." : "Sign Up"}
+              </button>
             </div>
-          </div>
 
-          <div className="form-section">
-            <p className="section-label">Requesting</p>
-            <textarea
-              className="request-textarea"
-              placeholder="What do you need?"
-              value={requesting}
-              onChange={(e) => setRequesting(e.target.value)}
-            />
-          </div>
+            <p className="login-text">
+              Already have an account?
+              <br />
+              <Link to="/login">Log In</Link>
+            </p>
+          </section>
 
-          <div className="form-section">
-            <p className="section-label">Offer</p>
-            <input
-              className="offer-input"
-              placeholder="What are you offering?"
-              value={offer}
-              onChange={(e) => setOffer(e.target.value)}
-            />
-          </div>
+          <section className="right-panel">
+            <div className="skills-preview">
+              <h1 className="skills-title">Skill Swap</h1>
+              <p>Search and swap skills!</p>
+              <p>Because not everything should cost money.</p>
 
-          <button className="post-btn" onClick={handlePost}>
-            Post Request
-          </button>
-        </div>
-      </main>
+              <div className="skills-grid">
+                {skills.map((skill, index) => (
+                  <div
+                    key={`${skill}-${index}`}
+                    className={`skill-tag ${skill === "Dog Grooming" ? "long" : ""}`}
+                  >
+                    ✦ {skill}
+                  </div>
+                ))}
+              </div>
+            </div>
+          </section>
+        </main>
+      </div>
     </div>
   );
 }
 
-export default CreateRequest;
+export default SignUp;

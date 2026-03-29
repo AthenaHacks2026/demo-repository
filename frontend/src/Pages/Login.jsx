@@ -1,10 +1,17 @@
+import { Link, useNavigate } from "react-router-dom";
+import { useState } from "react";
 import SignedOut_Header from "../Components/SignedOut_Header";
 import SkillTag from "../Components2/SkillTag";
-import { Link, useNavigate } from "react-router-dom";
+import { loginUser } from "../api/mockApi";
 import "../styles/Login.css";
 
 function Login() {
   const navigate = useNavigate();
+
+  const [email, setEmail] = useState("kenia@example.com");
+  const [password, setPassword] = useState("123456");
+  const [loading, setLoading] = useState(false);
+  const [errorMessage, setErrorMessage] = useState("");
 
   const skills = [
     "Baking",
@@ -16,8 +23,23 @@ function Login() {
     "Budgeting",
   ];
 
-  const handleLogin = () => {
-    navigate("/search");
+  const handleLogin = async () => {
+    setErrorMessage("");
+
+    if (!email.trim() || !password.trim()) {
+      setErrorMessage("Please enter your email and password.");
+      return;
+    }
+
+    try {
+      setLoading(true);
+      await loginUser(email, password);
+      navigate("/search");
+    } catch (error) {
+      setErrorMessage(error.message);
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -44,15 +66,30 @@ function Login() {
             <div className="login-box">
               <h2>✦ Log In</h2>
 
-              <input className="input-field" placeholder="Email" type="email" />
+              <input
+                className="input-field"
+                placeholder="Email"
+                type="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+              />
+
               <input
                 className="input-field"
                 placeholder="Password"
                 type="password"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
               />
 
-              <button className="login-btn" onClick={handleLogin}>
-                Log In
+              {errorMessage && <p className="error-text">{errorMessage}</p>}
+
+              <button
+                className="login-btn"
+                onClick={handleLogin}
+                disabled={loading}
+              >
+                {loading ? "Logging in..." : "Log In"}
               </button>
             </div>
 

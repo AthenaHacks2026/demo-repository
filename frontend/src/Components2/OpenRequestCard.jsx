@@ -1,49 +1,43 @@
-import { Link } from "react-router-dom";
-
 function OpenRequestCard({
   profilePic,
   name,
   description,
-  skills = [],
+  skills,
   requesting,
   offer,
+  onAccept,
 }) {
   return (
     <div className="open-request-card">
-      <div className="user-header">
-        <img src={profilePic} alt="Profile" className="profile-img" />
+      <div className="open-request-top">
+        <img src={profilePic} alt={name} className="open-request-avatar" />
 
-        <div className="user-text">
-          <h3 className="user-name">{name}</h3>
-          <p className="user-description">{description}</p>
+        <div className="open-request-userinfo">
+          <h2>{name}</h2>
+          <p>{description}</p>
         </div>
       </div>
 
-      <div className="skills-block">
-        <p className="label">Skills</p>
-        <div className="tags-row">
-          {Array.isArray(skills) &&
-            skills.map((skill, i) => (
-              <span key={i} className={`tag ${skill.className || ""}`}>
-                {skill.label}
-              </span>
-            ))}
-        </div>
+      <h3>Skills</h3>
+      <div className="open-request-skills">
+        {skills.map((skill, index) => (
+          <span key={index} className={`skill-pill ${skill.className}`}>
+            {skill.label}
+          </span>
+        ))}
       </div>
 
-      <div className="requesting-block">
-        <p className="label">Requesting</p>
-        <p className="requesting-text">{requesting}</p>
-      </div>
+      <h3>Requesting</h3>
+      <p className="open-request-text">{requesting}</p>
 
-      <div className="offer-block">
-        <p className="label">Offer</p>
-        <p className="offer-text">{offer}</p>
-      </div>
+      <h3>Offer</h3>
+      <p className="open-request-text">{offer}</p>
 
-      <Link to="/approved" className="accept-btn">
-        Accept
-      </Link>
+      {onAccept && (
+        <button className="open-request-accept-btn" onClick={onAccept}>
+          Accept
+        </button>
+      )}
     </div>
   );
 }

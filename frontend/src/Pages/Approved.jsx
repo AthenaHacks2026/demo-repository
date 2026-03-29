@@ -1,22 +1,52 @@
+import { useEffect, useState } from "react";
 import Login_Header from "../Components/Login_Header";
-import ConnectCard from "../Components2/ConnectCard";
-import profilePic from "../assets/image.png";
-import "../styles/Approved.css";
+import { getApprovedRequests } from "../api/mockApi";
 
 function Approved() {
+  const [requests, setRequests] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const loadApproved = async () => {
+      try {
+        const data = await getApprovedRequests();
+        setRequests(data);
+      } catch (error) {
+        console.error(error);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    loadApproved();
+  }, []);
+
   return (
-    <div className="approved-page">
+    <div>
       <Login_Header />
+      <main style={{ padding: "30px" }}>
+        <h1>Approved Requests</h1>
 
-      <main className="approved-main">
-        <h1 className="approved-title">Accepted!</h1>
-
-        <ConnectCard
-          profilePic={profilePic}
-          name="Hanna"
-          subtitle="NO REQUEST FROM MINIKUS!!!!"
-          contact="hannalody22@gmail.com"
-        />
+        {loading ? (
+          <p>Loading approved requests...</p>
+        ) : requests.length === 0 ? (
+          <p>No approved requests yet.</p>
+        ) : (
+          requests.map((request) => (
+            <div key={request.id} className="inbox-card">
+              <h3>{request.name}</h3>
+              <p>
+                <strong>Request:</strong> {request.requesting}
+              </p>
+              <p>
+                <strong>Offer:</strong> {request.offer}
+              </p>
+              <p>
+                <strong>Accepted By:</strong> {request.acceptedByName}
+              </p>
+            </div>
+          ))
+        )}
       </main>
     </div>
   );

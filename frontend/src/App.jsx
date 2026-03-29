@@ -10,10 +10,8 @@ import CreateRequest from "./Pages/CreateRequest";
 import OpenRequests from "./Pages/OpenRequests";
 import Approved from "./Pages/Approved";
 import Inbox_Received from "./Pages/Inbox_Received";
-import Inbox_Accepted from "./Pages/Inbox_Accepted";
-
 import Inbox_Outgoing from "./Pages/Inbox_Outgoing";
-
+import Inbox_Accepted from "./Pages/Inbox_Accepted";
 
 function App() {
   return (

@@ -1,9 +1,18 @@
-function InputField({ placeholder, type = "text" }) {
+function InputField({
+  placeholder,
+  value = "",
+  onChange,
+  readOnly = false,
+  type = "text",
+}) {
   return (
     <input
+      className="input-field"
       type={type}
       placeholder={placeholder}
-      className="input-field"
+      value={value}
+      onChange={onChange}
+      readOnly={readOnly}
     />
   );
 }
