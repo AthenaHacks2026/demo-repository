@@ -16,7 +16,7 @@ body,
 
 body {
   font-family: 'Comfortaa', sans-serif;
-  background: #f6f0df;
+  background: var(--pale-yellow);
   color: #222;
 }
 
@@ -24,7 +24,7 @@ body {
 .profile-page {
   width: 100%;
   min-height: 100vh;
-  background: #f6f0df;
+  background: var(--pale-yellow);
 }
 
 /* MAIN CONTENT AREA UNDER HEADER */
@@ -76,7 +76,7 @@ body {
 .profile-card {
   width: 490px;
   min-height: 360px;
-  background: #f8f8f8;
+  background: var(--white);
   border: 1.5px solid #555;
   border-radius: 18px;
   padding: 24px 26px;
@@ -148,7 +148,7 @@ body {
   border: 1.2px solid #777;
   border-radius: 8px;
   padding: 0 12px;
-  background: #fff;
+  background: var(--white);
   font-family: 'Comfortaa', sans-serif;
   font-size: 14px;
   color: #222;
@@ -170,7 +170,7 @@ body {
 
   border-radius: 999px;
   border: 1.5px solid #000;
-  background: #ffcbf4;
+  background: var(--pink);
 
   font-family: 'Dela Gothic One', sans-serif;
   font-size: 20px;

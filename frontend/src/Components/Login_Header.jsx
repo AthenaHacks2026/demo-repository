@@ -34,9 +34,9 @@ function Login_Header() {
         </Link>
       </nav>
 
-      <Link to="/profile" className="profile-link">
+      <a href="/profile">
         <img src={profilePic} alt="Profile" className="nav-user-img" />
-      </Link>
+      </a>
     </header>
   );
 }
