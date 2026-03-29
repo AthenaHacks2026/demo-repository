@@ -1,4 +1,7 @@
 import "../styles/Home.css";
+import star1 from "../assets/star1.png";
+import star2 from "../assets/star2.png";
+import star3 from "../assets/star3.png";
 
 function Home() {
   return (
@@ -36,7 +39,9 @@ function Home() {
 
         <div className="cards-container">
           <div className="info-card mission-card">
-            <div className="star">⭐</div>
+            <div className="star">
+              <img src={star1} alt="star1" />
+            </div>
             <h3>Mission</h3>
             <p>
               Dedicated to making skills accessible for your community for
@@ -45,7 +50,9 @@ function Home() {
           </div>
 
           <div className="info-card goal-card">
-            <div className="star">⭐</div>
+            <div className="star">
+              <img src={star2} alt="star2" />
+            </div>
             <h3>Goal</h3>
             <p>
               Dedicated to making skills accessible to your community for mutual
@@ -54,7 +61,9 @@ function Home() {
           </div>
 
           <div className="info-card vision-card">
-            <div className="star">⭐</div>
+            <div className="star">
+              <img src={star3} alt="star3" />
+            </div>
             <h3>Vision</h3>
             <p>
               Create a friendly place where people can share skills and help one
