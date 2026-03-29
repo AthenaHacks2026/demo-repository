@@ -14,14 +14,30 @@ function Home() {
 
           <nav className="nav-menu">
             <Link to="/">Home</Link>
-            <Link to="/services">Services</Link>
+            <Link to="/">About</Link>
+            <Link to="/services">Skills</Link>
             <Link to="/profile">Sign Up</Link>
             <button className="login-btn">Login</button>
           </nav>
         </header>
 
         <section className="hero">
-          <div className="hero-image"></div>
+          <div className="hero-image">
+            <div className="hero-skills">
+              <span className="hero-skill">✦ Baking</span>
+              <span className="hero-skill">✦ Knitting</span>
+              <span className="hero-skill">✦ Drawing</span>
+              <span className="hero-skill">✦ Sewing</span>
+              <span className="hero-skill">✦ Budgeting</span>
+              <span className="hero-skill">✦ Design</span>
+              <span className="hero-skill">✦ Gaming</span>
+              <span className="hero-skill long">✦ Dog Grooming</span>
+              <span className="hero-skill">✦ Coding</span>
+              <span className="hero-skill">✦ Cooking</span>
+              <span className="hero-skill">✦ Budgeting</span>
+              <span className="hero-skill">✦ Nail Styling</span>
+            </div>
+          </div>
 
           <div className="hero-text">
             <h1>Skill Swap</h1>
