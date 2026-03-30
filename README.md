@@ -1,5 +1,6 @@
 # SkillSwap
-**Athena Hacks 2026- Group 17**
+**Athena Hacks 2026- Group 17**  
+**🏆 Best Beginner Project**
 
 Skill Swap is a web app where people trade skills instead of money. Find help nearby, offer what you’re good at, and exchange value through community, not cost. Everyone has something to offer.
 
@@ -10,9 +11,11 @@ Skill Swap is a web app where people trade skills instead of money. Find help ne
 - Kenia Velasco — [GitHub](https://github.com/qennya) | [LinkedIn](https://www.linkedin.com/in/keniavelasco/)
 - Julia Chaidez — [GitHub](https://github.com/juliachaidez3) | [LinkedIn](https://www.linkedin.com/in/julia-chaidez-cpp2026/)
 
-## Demo Video
+## Important Links
 
-[Video Demo](https://www.youtube.com/watch?v=pmd2SSmzLyM)
+- [Video Demo](https://www.youtube.com/watch?v=pmd2SSmzLyM)  
+- [Devpost](https://devpost.com/software/skill-swap-3lwqgi?ref_content=my-projects-tab&ref_feature=my_projects)  
+- [Figma Design](https://www.figma.com/design/Pt6fNP9jVuozI9xrlUwiM4/SkillSwap?node-id=0-1&p=f&m=dev)
 
 ## Features
 
@@ -62,29 +65,29 @@ That idea became Skill Swap. A platform where people can trade what they know fo
 
 ## Project Structure
 
-SkillSwap/
-├── client/ # Frontend (React)
-│ ├── components/
-│ ├── pages/
-│ └── App.jsx
+SkillSwap/  
+├── client/  
+│   ├── components/  
+│   ├── pages/  
+│   └── App.jsx  
+│  
+├── server/         
+│   ├── models/  
+│   ├── routes/  
+│   └── controllers/  
 │
-├── server/ # Backend (Node.js / Express)
-│ ├── models/
-│ ├── routes/
-│ └── controllers/
-│
-├── package.json
-└── README.md
+├── package.json  
+└── README.md  
 
 ## Hackathon Goals
 
-- Best UI/UX  
-- Best Beginner Project  
+🏆 Best Beginner Project  
 - Best Overall
 - Athena's Favorite
+- Best UI/UX  
 - Best Hack By Bloomberg Engineering
 
-## Discosure of AI use
+## Discosure of AI Use
 
 - brainstorming the initial project idea
 - file structure set up
