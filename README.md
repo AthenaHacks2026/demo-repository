@@ -14,7 +14,7 @@ Skill Swap is a web app where people trade skills instead of money. Find help ne
 ## Important Links
 
 - [Video Demo](https://www.youtube.com/watch?v=pmd2SSmzLyM)  
-- [Devpost](https://devpost.com/software/skill-swap-3lwqgi?ref_content=my-projects-tab&ref_feature=my_projects)  
+- [Devpost](https://devpost.com/software/skill-swap-3lwqgi?_gl=1*clne2x*_gcl_au*MTA0NzkwOTYzMy4xNzc0NzM1NjEw*_ga*MjEyOTA5Njg1LjE3NzQ3MzU2MTE.*_ga_0YHJK3Y10M*czE3NzU2ODQ1NjYkbzEyJGcxJHQxNzc1Njg0NzYyJGo1OSRsMCRoMA..)  
 - [Figma Design](https://www.figma.com/design/Pt6fNP9jVuozI9xrlUwiM4/SkillSwap?node-id=0-1&p=f&m=dev)
 
 ## Features
